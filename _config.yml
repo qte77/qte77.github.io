@@ -2,6 +2,8 @@
 # This file contains configuration flags to customize your site
 #
 
+title: Testing page
+
 # Name of your site (displayed in the header)
 name: Testing page
 
