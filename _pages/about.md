@@ -4,7 +4,5 @@ title: About
 permalink: /about/
 ---
 
-## Hi
-
-- 1
-- 2
+- [Sitemap](https://{{ site.footer-links.github }}.github.io/sitemap.xml)
+- [RSS](https://{{ site.footer-links.github }}.github.io/feed)
