@@ -2,19 +2,19 @@
 # This file contains configuration flags to customize your site
 #
 
-title: Testing page
+title: Recap on ML
 
 # Name of your site (displayed in the header)
-name: Testing page
+name: Recap on ML
 
 # Name of the author
 author: qte77
 
 # Short bio or description (displayed in the header)
-description: This is a really goodd test
+description: Recap on ML
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: /images/reverie.png
+avatar: https://avatars.githubusercontent.com/u/93844790?v=4 #/images/reverie.png
 
 #
 # Flags below are optional
@@ -86,7 +86,7 @@ sass:
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-  - jekyll-seo-tag
+  # - jekyll-seo-tag
   - jekyll-paginate
 
 include: ['_pages']
