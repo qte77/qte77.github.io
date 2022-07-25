@@ -74,33 +74,57 @@ inner: end
 
 ## Decorater Annotation
 
-The decorator annotation `@outer` replaces the notation `outer(f, True)()`. 
+The decorator annotation `@outer` replaces the notation `outer(f, True)()`.  
+`*args` and `**kwargs` can be provided.
 
 ```python
+from typing import Any
 def outer_deco(f_arg: object) -> object:
 
-    def inner(*args):
+    def inner(*args: Any) -> None:
         f_arg(*args)
-
+    
     return inner
 
 @outer_deco
 def f(*args):
     out = str(args[0]) if args else 'no *args given'
-    print(f'This is f called by decorator annotation and saying "{out}"')
+    print(f'This is f called by decorator annotation saying "{out}"')
 
 f()
 f('Hello World!')
 ```
 
-Output.
-
 ```
 >>> f()
-This is f called by decorator annotation and saying "no *args given"
+This is f called by decorator annotation saying "no *args given"
 >>> f('Hello World!')
-This is f called by decorator annotation and saying "Hello World!"
+This is f called by decorator annotation saying "Hello World!"
 ```
 
+### Decorator with return values
 
+```python
+def outer_deco(f_arg: function) -> function:
 
+    def inner() -> str:
+        ret = f_arg()
+        print(f'inner will return: {ret}')
+        return ret
+    
+    return inner
+
+@outer_deco
+def f(*args):
+    return 'This is inner'
+
+ret = f()
+print(f'inner returned: {ret}')
+```
+
+```
+>>> ret = f()
+inner will return: This is inner
+>>> print(f'inner returned: {ret}')
+inner returned: This is inner
+```
