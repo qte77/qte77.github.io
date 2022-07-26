@@ -32,35 +32,78 @@ which is object <function f1 at 0x000001AA553B7C10> of type <class 'function'>
 inside f1: foobar runs
 ```
 
+## Closures
+
+The closures store the function and its environment for later usage. Meaning the free variables are references even if the function is called outside of the closures scopes.
+
+```python
+def outer(f_arg: object, deco: bool = None) -> Union[object, None]:
+
+    # free variable
+    msg_outer = 'This is \'msg_outer\', a free variable used by inner'
+
+    def inner():
+        print(f'inner: start')
+        print(msg_outer)
+        f_arg() # gets called either way
+        print(f'inner: end')
+
+    return inner
+
+def f():
+    print('This is f passed as an argument')
+
+closure = outer(f)
+closure
+closure()
+```
+
+```
+>>> closure
+<function outer.<locals>.inner at 0x000002344DAF6B80>
+>>> closure()
+inner: start
+This is 'msg_outer', a free variable used by inner
+This is f passed as an argument
+inner: end
+```
+
 ## Wrapper function
 
 Function `outer` gets called with function `f` as an argument.  
 If bool argument `deco` is provided, then `f` will be evaluated and not returned.
-Function `f_arg`  called inside `inner` either way. 
+Function `f_arg` gets called inside `inner` either way.
 
 ```python
 from typing import Union
 def outer(f_arg: object, deco: bool = None) -> Union[object,None]:
 
+    # free variable
+    msg_outer = 'This is \'msg_outer\', a free variable used by inner'
+
     def inner():
         print(f'inner: start')
+        print(msg_outer)
         f_arg() # gets called either way
         print(f'inner: end')
 
     return inner if deco else inner()
 
 def f():
-    print('This is f')
+    print('This is f passed as an argument')
 
-outer(f, False)
-outer(f, True)() # decoration
+closure_1 = outer(f, False)
+closure_2 = outer(f, True)() # () as a decoration
+closure_1
+closure_2
 ```
 
 Output with `deco` not true calls inner ad hoc.
 
 ```
 inner: start
-This is f
+This 'msg_outer', a free variable used by inner
+This is f passed as an argument
 inner: end
 ```
 
@@ -102,7 +145,7 @@ This is f called by decorator annotation saying "no *args given"
 This is f called by decorator annotation saying "Hello World!"
 ```
 
-### Decorator with return values
+## Decorator with return values
 
 ```python
 def outer_deco(f_arg: function) -> function:
@@ -115,7 +158,7 @@ def outer_deco(f_arg: function) -> function:
     return inner
 
 @outer_deco
-def f(*args):
+def f():
     return 'This is inner'
 
 ret = f()
