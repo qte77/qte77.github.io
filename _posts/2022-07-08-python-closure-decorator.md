@@ -61,13 +61,13 @@ closure("hello world")
 <details>
 <summary>Expand for Output</summary>
 <p><pre>
->>> closure
-<function outer.<locals>.inner at 0x000002344DAF6B80>
->>> closure()
+&gt;&gt;&gt; closure
+&lt;function outer.&lt;locals&gt;.inner at 0x000002344DAF6B80&gt;
+&gt;&gt;&gt; closure()
 This is 'msg_outer', a free variable used by inner
 This is f passed as an argument with args[0] equal 'None'
 inner: end
->>> closure("hello world")
+&gt;&gt;&gt; closure("hello world")
 inner: start
 This is 'msg_outer', a free variable used by inner
 This is 'f' passed as an argument with args[0] equal 'hello world'

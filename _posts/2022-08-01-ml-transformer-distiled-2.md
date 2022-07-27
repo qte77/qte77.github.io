@@ -5,8 +5,10 @@ excerpt:
 categories: [ml, theory, transformer, regularization, attention, embedding, encoding]
 ---
 
-# Regularization
+# Transformer distiled, Part 2 of 2
 
-# Self- vs cross-attention
+## Regularization
 
-# Adding vs concatenating positional encoding
+## Self- vs Cross-Attention
+
+## Adding vs concatenating positional encoding

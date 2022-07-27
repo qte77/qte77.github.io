@@ -5,12 +5,14 @@ excerpt:
 categories: [ml, theory, transformer, pro vs con, complexity, TIME, SPACE, path length, parallelization, transfer learning, pre-training]
 ---
 
-# O(n^2)
+# Transformer pro and contra
 
-# O(1)
+## O(n^2)
 
-# Parallel
+## O(1)
 
-# Transfer learning
+## Parallelization
 
-# Pre-training
+## Transfer learning
+
+## Pre-training

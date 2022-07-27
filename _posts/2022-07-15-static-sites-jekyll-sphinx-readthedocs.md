@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  Static-sites with GH-Pages, Jekyll, Sphinx and ReadTheDocs
+title:  Static-sites on GH-Pages
 excerpt: 
 categories: [statis-sites, gh-pages, jekyll, sphinx, readthedocs, github.io]
 ---
 
-# Github pages
+# {{ title }}
+
+## Github Pages
 
 ## Jekyll small themes
 

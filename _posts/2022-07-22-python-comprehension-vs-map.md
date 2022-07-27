@@ -1,14 +1,13 @@
 ---
 layout: post
 title:  Python Comprehension vs map()
-excerpt: 
+excerpt: The comprehension techiques for the data types `list`, `dict` and `set` append values to new data objects. They can be used to replace loops with `for` and functions like `map` and `filter`.  
 categories: [python, comprehension, map function]
 ---
 
 # Python Comprehension vs map()
 
-The comprehension techiques for the data types `list`, `dict` and `set` append values to new data objects.
-They can be used to replace loops with `for` and functions like `map` and `filter`.  
+The comprehension techiques for the data types `list`, `dict` and `set` append values to new data objects. They can be used to replace loops with `for` and functions like `map` and `filter`.  
 The following examples showcase the usage of comprehension versus `map()` with the tokenization of a dataset for a Hugging Face pre-trained model.
 
 ## Basics with lists
@@ -66,9 +65,9 @@ show_code(n**2 for n in data)
 <details>
 <summary>Expand for Output</summary>
 <p><pre>
->>> dis(n**2 for n in data)
+&gt;&gt;&gt; dis(n**2 for n in data)
   1           0 LOAD_FAST                0 (.0)
-        >>    2 FOR_ITER                14 (to 18)
+        &gt;&gt;    2 FOR_ITER                14 (to 18)
               4 STORE_FAST               1 (n)
               6 LOAD_FAST                1 (n)
               8 LOAD_CONST               0 (2)
@@ -76,9 +75,9 @@ show_code(n**2 for n in data)
              12 YIELD_VALUE
              14 POP_TOP
              16 JUMP_ABSOLUTE            2
-        >>   18 LOAD_CONST               1 (None)
+        &gt;&gt;   18 LOAD_CONST               1 (None)
              20 RETURN_VALUE
->>> show_code(n**2 for n in data)
+&gt;&gt;&gt; show_code(n**2 for n in data)
 Name:              <genexpr>
 Filename:          <stdin>
 Argument count:    1
@@ -107,13 +106,13 @@ show_code(lfun)
 <details>
 <summary>Expand for Output</summary>
 <p><pre>
->>> lfun = lambda n: n**2
->>> dis(lfun)
+&gt;&gt;&gt; lfun = lambda n: n**2
+&gt;&gt;&gt; dis(lfun)
   1           0 LOAD_FAST                0 (n)
               2 LOAD_CONST               1 (2)
               4 BINARY_POWER
               6 RETURN_VALUE
->>> show_code(lfun)
+&gt;&gt;&gt; show_code(lfun)
 Name:              <lambda>
 Filename:          <stdin>
 Argument count:    1
