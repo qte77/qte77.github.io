@@ -63,8 +63,9 @@ dis(n**2 for n in data)
 show_code(n**2 for n in data)
 ```
 
-<details> 
-<pre>
+<details>
+<summary>Expand for Output</summary>
+<p><pre>
 >>> dis(n**2 for n in data)
   1           0 LOAD_FAST                0 (.0)
         >>    2 FOR_ITER                14 (to 18)
@@ -92,7 +93,7 @@ Constants:
 Variable names:
    0: .0
    1: n
-</pre>
+</pre></p>
 </details>
 <div>&nbsp;</div>
 
@@ -103,8 +104,9 @@ dis(lfun)
 show_code(lfun)
 ```
 
-<details> 
-<pre>
+<details>
+<summary>Expand for Output</summary>
+<p><pre>
 >>> lfun = lambda n: n**2
 >>> dis(lfun)
   1           0 LOAD_FAST                0 (n)
@@ -125,7 +127,7 @@ Constants:
    1: 2
 Variable names:
    0: n
-</pre>
+</pre></p>
 </details>
 <div>&nbsp;</div>
 

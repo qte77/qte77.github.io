@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Python Closures and Decorators
-excerpt: Functions are treated as objects and can be used as arguments for other functions. The higher function `f2` gets `f1` as an argument and calls it.
+excerpt: Functions are treated as objects and can be used as arguments or return values for other higher functions. This paradigm is called first-class functions. A built-in example in python would be map() which takes a function as an argument.
 categories: [python, decorators, closures, functions]
 ---
 
@@ -9,8 +9,7 @@ categories: [python, decorators, closures, functions]
 
 ## Basics
 
-Functions are treated as objects and can be used as arguments or return values for other higher functions.  
-This paradigm is called first-class functions. A built-in example in python would be map() which takes a function as an argument.  
+Functions are treated as objects and can be used as arguments or return values for other higher functions. This paradigm is called first-class functions. A built-in example in python would be map() which takes a function as an argument.  
 In the following example the higher function `f2` gets `f1` as an argument and executes it.
 
 ```python
@@ -60,7 +59,8 @@ closure("hello world")
 ```
 
 <details>
-<pre>
+<summary>Expand for Output</summary>
+<p><pre>
 >>> closure
 <function outer.<locals>.inner at 0x000002344DAF6B80>
 >>> closure()
@@ -72,7 +72,7 @@ inner: start
 This is 'msg_outer', a free variable used by inner
 This is 'f' passed as an argument with args[0] equal 'hello world'
 inner: end
-</pre>
+</pre></p>
 </details>
 <div>&nbsp;</div>
 
