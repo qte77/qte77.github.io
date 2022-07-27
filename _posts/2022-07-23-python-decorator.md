@@ -2,22 +2,23 @@
 layout: post
 title:  Python decorator function
 excerpt: Functions are treated as objects and can be used as arguments for other functions. The higher function `f2` gets `f1` as an argument and calls it.
-categories: [python, decorator, function]
+categories: [python, decorators, closures, functions]
 ---
 
 # Python decorator function
 
 ## Basics
 
-Functions are treated as objects and can be used as arguments for other functions. 
-The higher function `f2` gets `f1` as an argument and calls it.
+Functions are treated as objects and can be used as arguments or return values for other higher functions.  
+This paradigm is called first-class functions. A built-in example in python would be map() which takes a function as an argument.  
+In the following example the higher function `f2` gets `f1` as an argument and executes it.
 
 ```python
 def f1() -> None:
     print('inside f1: foobar runs')
 
 def f2(f: object) -> None:
-    print('inside f2: f1 gets called')
+    print('inside f2: f1 gets executed')
     print(f'which is object {str(f)} of type {type(f)}')
     f()
 
@@ -27,14 +28,15 @@ f2(f1)
 Output
 
 ```
-inside f2: f1 gets called
+inside f2: f1 gets executed
 which is object <function f1 at 0x000001AA553B7C10> of type <class 'function'>
 inside f1: foobar runs
 ```
 
 ## Closures
 
-The closures store the function and its environment for later usage. Meaning the free variables are references even if the function is called outside of the closures scopes.
+Closures store the function and its environment for later usage.  
+Meaning free variables, i.e. non-local variables, are referenced even if the function is called outside of the closures scopes.
 
 ```python
 def outer(f_arg: object) -> object:
