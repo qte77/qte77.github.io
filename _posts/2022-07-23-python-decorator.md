@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Python decorator function
-excerpt: 
+excerpt: Functions are treated as objects and can be used as arguments for other functions. The higher function `f2` gets `f1` as an argument and calls it.
 categories: [python, decorator, function]
 ---
 
@@ -9,8 +9,8 @@ categories: [python, decorator, function]
 
 ## Basics
 
-Functions are treated as objects and can be used as arguments for other functions.  
-Function `f2` gets `f1` as an argument and calls it.
+Functions are treated as objects and can be used as arguments for other functions. 
+The higher function `f2` gets `f1` as an argument and calls it.
 
 ```python
 def f1() -> None:
