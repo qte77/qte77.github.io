@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  Python decorator function
+title:  Python Closures and Decorators
 excerpt: Functions are treated as objects and can be used as arguments for other functions. The higher function `f2` gets `f1` as an argument and calls it.
 categories: [python, decorators, closures, functions]
 ---
 
-# Python decorator function
+# Python Closures and Decorators
 
 ## Basics
 
@@ -24,8 +24,6 @@ def f2(f: object) -> None:
 
 f2(f1)
 ```
-
-Output
 
 ```
 inside f2: f1 gets executed
@@ -61,7 +59,8 @@ closure()
 closure("hello world")
 ```
 
-```
+<details>
+<pre>
 >>> closure
 <function outer.<locals>.inner at 0x000002344DAF6B80>
 >>> closure()
@@ -73,13 +72,14 @@ inner: start
 This is 'msg_outer', a free variable used by inner
 This is 'f' passed as an argument with args[0] equal 'hello world'
 inner: end
-```
+</pre>
+</details>
+<div>&nbsp;</div>
 
 ## Wrapper function
 
-Function `outer` gets called with function `f` as an argument.  
-If bool argument `deco` is provided, then `f` will be evaluated and not returned.
-Function `f_arg` gets called inside `inner` either way.
+The decorating function `outer` gets called with the decorated function `f` as an argument. The decorating `outer` adds functionality to `f`.  
+In the following case printing some messages like the (from the point of view of `f`) free variable `msg_outer`. If bool argument `deco` is provided, then `f` will be evaluated and not returned. Function `f_arg` gets called inside `inner` either way.
 
 ```python
 from typing import Union
@@ -124,7 +124,7 @@ inner: end
 
 ## Decorater Annotation
 
-The decorator annotation `@outer` replaces the notation `outer(f, True)()`.  
+The decorator annotation `@outer` replaces the notation `outer(f, True)`.  
 `*args` and `**kwargs` can be provided.
 
 ```python
@@ -139,7 +139,7 @@ def outer_deco(f_arg: object) -> object:
 @outer_deco
 def f(*args):
     out = str(args[0]) if args else 'no *args given'
-    print(f'This is f called by decorator annotation saying "{out}"')
+    print(f'This is decorated f called by decorator annotation saying \'{out}\'')
 
 f()
 f('Hello World!')
@@ -147,9 +147,9 @@ f('Hello World!')
 
 ```
 >>> f()
-This is f called by decorator annotation saying "no *args given"
+This is decorated f called by decorator annotation saying 'no *args given'
 >>> f('Hello World!')
-This is f called by decorator annotation saying "Hello World!"
+This is decorated f called by decorator annotation saying 'Hello World!'
 ```
 
 ## Decorator with return values
@@ -162,19 +162,19 @@ def outer_deco(f_arg: object) -> object:
         print(f'inner WILL return: {ret}')
         return ret
     
-    return inner
+    return inner # does not get executed
 
 @outer_deco
 def f():
-    return 'This is inner'
+    return 'This is decorated \'f\''
 
-ret = f()
-print(f'inner returned: {ret}')
+ret = f() # gets executed
+print(f'inner DID return: {ret}')
 ```
 
 ```
 >>> ret = f()
-inner WILL return: This is inner
->>> print(f'inner returned: {ret}')
-inner DID return: This is inner
+inner WILL return: This is decorated 'f'
+>>> print(f'inner DID return: {ret}')
+inner DID return: This is decorated 'f'
 ```

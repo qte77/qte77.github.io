@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  Transformer distiled, Part 2 of 2
-excerpt: Jekyll, Sphinx, ReadTheDocs
-categories: [docgen, documentation, generation, github.io]
+title:  Static-sites with GH-Pages, Jekyll, Sphinx and ReadTheDocs
+excerpt: 
+categories: [statis-sites, gh-pages, jekyll, sphinx, readthedocs, github.io]
 ---
 
 # Github pages

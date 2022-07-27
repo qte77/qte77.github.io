@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  Transformer distiled, Part 2 of 2
-excerpt: regularizarion, self vs cross attention, adding vs concatenating positional encoding
-categories: [ML, Transformer]
+excerpt: 
+categories: [ml, theory, transformer, regularization, attention, embedding, encoding]
 ---
 
 # Regularization
