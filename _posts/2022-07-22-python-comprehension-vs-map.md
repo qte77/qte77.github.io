@@ -62,6 +62,7 @@ dis(n**2 for n in data)
 show_code(n**2 for n in data)
 ```
 
+<div>&nbsp;</div>
 <details>
 <summary>Expand for Output</summary>
 <p><pre>
@@ -103,6 +104,7 @@ dis(lfun)
 show_code(lfun)
 ```
 
+<div>&nbsp;</div>
 <details>
 <summary>Expand for Output</summary>
 <p><pre>

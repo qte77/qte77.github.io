@@ -58,6 +58,7 @@ closure()
 closure("hello world")
 ```
 
+<div>&nbsp;</div>
 <details>
 <summary>Expand for Output</summary>
 <p><pre>

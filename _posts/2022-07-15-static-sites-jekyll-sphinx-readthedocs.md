@@ -5,7 +5,7 @@ excerpt:
 categories: [statis-sites, gh-pages, jekyll, sphinx, readthedocs, github.io]
 ---
 
-# {{ title }}
+# {{ site.title }}
 
 ## Github Pages
 
