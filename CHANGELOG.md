@@ -19,6 +19,19 @@ Types of changes:
 - Things to come
 - Move to new version section if completed
 
+## [0.3.0] - 2022-07-28
+
+### Added
+
+- Post about comprehension versus `map()` in Python
+- Post draft of iterators versus generators in Python
+
+### Changed
+
+- Post names for Transformer distiled 1 and 2, static sites, covar shift and inductive priors as well as `MatMul` vs `EinSum` in Python
+- Schedule of posts
+
+
 ## [0.2.0] - 2022-07-26
 
 ### Added
