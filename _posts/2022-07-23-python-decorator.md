@@ -37,34 +37,39 @@ inside f1: foobar runs
 The closures store the function and its environment for later usage. Meaning the free variables are references even if the function is called outside of the closures scopes.
 
 ```python
-def outer(f_arg: object, deco: bool = None) -> Union[object, None]:
+def outer(f_arg: object) -> object:
 
     # free variable
     msg_outer = 'This is \'msg_outer\', a free variable used by inner'
 
-    def inner():
+    def inner(msg_inner: str = None) -> None:
         print(f'inner: start')
         print(msg_outer)
-        f_arg() # gets called either way
+        f_arg(msg_inner) # gets called either way
         print(f'inner: end')
 
     return inner
 
-def f():
-    print('This is f passed as an argument')
+def f(msg: str = None) -> None:
+    print(f'This is \'f\' passed as an argument with args[0] equal \'{msg}\'')
 
 closure = outer(f)
 closure
 closure()
+closure("hello world")
 ```
 
 ```
 >>> closure
 <function outer.<locals>.inner at 0x000002344DAF6B80>
 >>> closure()
+This is 'msg_outer', a free variable used by inner
+This is f passed as an argument with args[0] equal 'None'
+inner: end
+>>> closure("hello world")
 inner: start
 This is 'msg_outer', a free variable used by inner
-This is f passed as an argument
+This is 'f' passed as an argument with args[0] equal 'hello world'
 inner: end
 ```
 
@@ -148,11 +153,11 @@ This is f called by decorator annotation saying "Hello World!"
 ## Decorator with return values
 
 ```python
-def outer_deco(f_arg: function) -> function:
+def outer_deco(f_arg: object) -> object:
 
     def inner() -> str:
         ret = f_arg()
-        print(f'inner will return: {ret}')
+        print(f'inner WILL return: {ret}')
         return ret
     
     return inner
@@ -167,7 +172,7 @@ print(f'inner returned: {ret}')
 
 ```
 >>> ret = f()
-inner will return: This is inner
+inner WILL return: This is inner
 >>> print(f'inner returned: {ret}')
-inner returned: This is inner
+inner DID return: This is inner
 ```
