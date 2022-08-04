@@ -24,7 +24,7 @@ def f2(f: object) -> None:
 f2(f1)
 ```
 
-```
+```sh
 inside f2: f1 gets executed
 which is object <function f1 at 0x000001AA553B7C10> of type <class 'function'>
 inside f1: foobar runs
@@ -106,9 +106,9 @@ closure_1
 closure_2
 ```
 
-Output with `deco` not true calls inner ad hoc.
+Output with `deco` not true calls `inner` ad hoc.
 
-```
+```sh
 inner: start
 This 'msg_outer', a free variable used by inner
 This is f passed as an argument
@@ -117,7 +117,7 @@ inner: end
 
 Output with `deco` equal `True` returns `inner` as an object witch gets called by trailing `()`.
 
-```
+```sh
 inner: start
 This is f
 inner: end
@@ -146,7 +146,7 @@ f()
 f('Hello World!')
 ```
 
-```
+```sh
 >>> f()
 This is decorated f called by decorator annotation saying 'no *args given'
 >>> f('Hello World!')
@@ -173,7 +173,7 @@ ret = f() # gets executed
 print(f'inner DID return: {ret}')
 ```
 
-```
+```sh
 >>> ret = f()
 inner WILL return: This is decorated 'f'
 >>> print(f'inner DID return: {ret}')

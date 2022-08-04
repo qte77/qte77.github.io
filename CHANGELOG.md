@@ -19,6 +19,13 @@ Types of changes:
 - Things to come
 - Move to new version section if completed
 
+## [0.4.0] - 2022-08-04
+
+### Added
+
+- `.markdownlint.yml`
+- `python-futures.md` scheduled for 2022-09-08
+
 ## [0.3.0] - 2022-07-28
 
 ### Added
@@ -30,7 +37,6 @@ Types of changes:
 
 - Post names for Transformer distiled 1 and 2, static sites, covar shift and inductive priors as well as `MatMul` vs `EinSum` in Python
 - Schedule of posts
-
 
 ## [0.2.0] - 2022-07-26
 
@@ -44,4 +50,3 @@ Types of changes:
 ### Added
 
 - forked from `amitmerchant1990/reverie`
-
