@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  SegFormer Quantization Part 1 Introduction
+title:  SegFormer Quantization Part 1 Short Intro
 excerpt: 
 categories: [ml, theory, transformer, attention, embedding, encoding, tensor, quantization]
 ---
