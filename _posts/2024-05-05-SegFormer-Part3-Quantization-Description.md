@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  SegFormer Part 2, Quantization Description
+title:  SegFormer Part 3, Quantization Description
 excerpt: 
 categories: [writeup, transformer, segformer, quantization, description]
 ---
