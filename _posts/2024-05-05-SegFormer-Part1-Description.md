@@ -70,3 +70,34 @@ with no_grad():
 pred_cls_idx = logits.argmax(-1).item()
 print(f"{pred_cls_idx=}, {model.config.id2label[pred_cls_idx]=}")
 ```
+
+## Some weights of SegformerForSemanticSegmentation were not initialized
+
+The following layers were not initialized because they should be fine-tuned to down-stream task.
+
+* 'decode_head.classifier.weight'
+* 'decode_head.batch_norm.bias'
+* 'decode_head.linear_c.3.proj.bias'
+* 'decode_head.batch_norm.running_mean'
+* 'decode_head.batch_norm.weight'
+* 'decode_head.batch_norm.running_var'
+* 'decode_head.linear_c.0.proj.weight'
+* 'decode_head.linear_c.1.proj.weight'
+* 'decode_head.classifier.bias'
+* 'decode_head.linear_c.1.proj.bias'
+* 'decode_head.linear_c.3.proj.weight'
+* 'decode_head.linear_c.2.proj.bias'
+* 'decode_head.linear_c.2.proj.weight'
+* 'decode_head.linear_fuse.weight'ac
+* 'decode_head.batch_norm.num_batches_tracked'
+* 'decode_head.linear_c.0.proj.bias'
+
+In regards to the following warning:
+
+```
+Some weights of SegformerForSemanticSegmentation were not initialized from the model checkpoint at [...] are newly initialized because the shapes did not match:
+- decode_head.classifier.weight: found shape torch.Size([150, 256, 1, 1]) in the checkpoint and torch.Size([151, 256, 1, 1]) in the model instantiated
+- decode_head.classifier.bias: found shape torch.Size([150]) in the checkpoint and torch.Size([151]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+```
+
