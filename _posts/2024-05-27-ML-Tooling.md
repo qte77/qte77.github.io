@@ -4,11 +4,22 @@ title:  Collection of Tools for ML
 categories: [ml, tools]
 ---
 
+
+
 # E2E Automated ML Tools (AMLT)
 
 - [Google AutoML](https://cloud.google.com/automl/)
 - [H2O Driverless AI](https://h2o.ai/platform/ai-cloud/make/h2o-driverless-ai/)
-- [AutoML.org](https://github.com/automl) -> [AutoML24 Sep 09.-12. Paris](https://2024.automl.cc/)
+- [Auto-Keras](https://github.com/keras-team/autokeras)
+- [AutoML.org](https://github.com/automl)
+  - [Auto-PyTorch](https://github.com/automl/Auto-PyTorch)
+  - [Auto-Sklearn](https://github.com/automl/auto-sklearn)
+- [AutoGluon](https://github.com/autogluon/autogluon)
+- [TPOT](https://github.com/EpistasisLab/tpot)
+
+Also:
+- [rminer](https://rdrr.io/cran/rminer)
+- [TransmogrifAI](https://docs.transmogrif.ai/en/stable/developer-guide)
 
 # EDA
 
@@ -16,7 +27,6 @@ categories: [ml, tools]
 - [pandas_profiling.ProfileReport](https://github.com/pandas-profiling/pandas-profiling)
 - [SweetViz](https://github.com/fbdesignpro/sweetviz)
 - [AutoViz](https://github.com/AutoViML/AutoViz.git)
-- [datexplore](https://github.com/epistasislab/tpot)
 
 # Cleaning
 
@@ -26,8 +36,8 @@ categories: [ml, tools]
 # FE
 
 - [Featuretools](https://www.featuretools.com/)
-- [TPOT](https://epistasislab.github.io/tpot/)
 - [OpenFE](https://github.com/IIIS-Li-Group/OpenFE)
+  - [qte77/OpenFE fork](https://github.com/qte77/OpenFE)
 
 # Pipeline
 
