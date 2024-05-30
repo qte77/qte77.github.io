@@ -16,6 +16,15 @@ categories: [ml, tools]
   - [Auto-Sklearn](https://github.com/automl/auto-sklearn)
 - [AutoGluon](https://github.com/autogluon/autogluon)
 - [TPOT](https://github.com/EpistasisLab/tpot)
+- [FLAML](https://microsoft.github.io/FLAML/)
+- [LightAutoML](https://github.com/sberbank-ai-lab/lightautoml)
+- [EvalML](https://github.com/alteryx/evalml)
+- [pycaret](https://github.com/pycaret/pycaret)
+- [BlueCast](https://github.com/ThomasMeissnerDS/BlueCast)
+- Hyperscaler
+    - [Vertex AI - Google AI Tables](https://cloud.google.com/vertex-ai/docs/beginner/beginners-guide)
+    - [AWS Sagemaker](https://aws.amazon.com/machine-learning/automl/)
+    - [Azure AutoML](https://azure.microsoft.com/products/machine-learning/automatedml)
 
 Also:
 - [rminer](https://rdrr.io/cran/rminer)
