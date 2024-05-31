@@ -4,8 +4,6 @@ title:  Collection of Tools for ML
 categories: [ml, tools]
 ---
 
-
-
 # E2E Automated ML Tools (AMLT)
 
 - [Google AutoML](https://cloud.google.com/automl/)
@@ -36,6 +34,10 @@ Also:
 - [pandas_profiling.ProfileReport](https://github.com/pandas-profiling/pandas-profiling)
 - [SweetViz](https://github.com/fbdesignpro/sweetviz)
 - [AutoViz](https://github.com/AutoViML/AutoViz.git)
+- [Lux](https://github.com/lux-org/lux/)
+- [Vaex](https://github.com/vaexio/vaex)
+- [D-Tale](https://github.com/man-group/dtale)
+- [Yellowbrick](https://github.com/DistrictDataLabs/yellowbrick)
 
 # Cleaning
 
@@ -80,3 +82,8 @@ Also:
 - [Try Jupyter](https://jupyter.org/try)
 - [Binder](https://mybinder.org/)
 - [Kaggle Notebooks](https://www.kaggle.com/docs/notebooks)
+
+# Operationalize Notebooks
+
+- [Jupytext](https://jupytext.readthedocs.io/)
+- [papermill](https://papermill.readthedocs.io/)
