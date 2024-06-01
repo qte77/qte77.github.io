@@ -6,7 +6,6 @@ categories: [ml, tools]
 
 # E2E Automated ML Tools (AMLT)
 
-- [Google AutoML](https://cloud.google.com/automl/)
 - [H2O Driverless AI](https://h2o.ai/platform/ai-cloud/make/h2o-driverless-ai/)
 - [Auto-Keras](https://github.com/keras-team/autokeras)
 - [AutoML.org](https://github.com/automl)
@@ -19,14 +18,14 @@ categories: [ml, tools]
 - [EvalML](https://github.com/alteryx/evalml)
 - [pycaret](https://github.com/pycaret/pycaret)
 - [BlueCast](https://github.com/ThomasMeissnerDS/BlueCast)
+- [Microsoft ML.NET AutoML](https://learn.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/how-to-use-the-automl-api)
 - Hyperscaler
-    - [Vertex AI - Google AI Tables](https://cloud.google.com/vertex-ai/docs/beginner/beginners-guide)
-    - [AWS Sagemaker](https://aws.amazon.com/machine-learning/automl/)
-    - [Azure AutoML](https://azure.microsoft.com/products/machine-learning/automatedml)
-
-Also:
-- [rminer](https://rdrr.io/cran/rminer)
-- [TransmogrifAI](https://docs.transmogrif.ai/en/stable/developer-guide)
+  - [Vertex AI - Google AI Tables](https://cloud.google.com/vertex-ai/docs/beginner/beginners-guide)
+  - [AWS Sagemaker](https://aws.amazon.com/machine-learning/automl/)
+  - [Azure AutoML](https://azure.microsoft.com/products/machine-learning/automatedml)
+- Also
+  - [rminer](https://rdrr.io/cran/rminer)
+  - [TransmogrifAI](https://docs.transmogrif.ai/en/stable/developer-guide)
 
 # EDA
 
@@ -49,6 +48,7 @@ Also:
 - [Featuretools](https://www.featuretools.com/)
 - [OpenFE](https://github.com/IIIS-Li-Group/OpenFE)
   - [qte77/OpenFE fork](https://github.com/qte77/OpenFE)
+- [AutoGluon Tabular - Feature Engineering](https://auto.gluon.ai/stable/tutorials/tabular/tabular-feature-engineering.html)
 
 # Pipeline
 
