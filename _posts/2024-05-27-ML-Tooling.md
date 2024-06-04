@@ -59,10 +59,11 @@ categories: [ml, tools]
 
 - [Optuna - A hyperparameter optimization framework](https://optuna.org/), also Ensemble tuning
 
-# Ensemble
+# Ensemble/NAS
 
 - [sklearn.ensemble Ensemble methods](https://scikit-learn.org/stable/auto_examples/ensemble/index.html)
 - [AutoGluon](https://auto.gluon.ai/stable/index.html)
+- [deephyper](https://github.com/deephyper/deephyper)
 
 # Logging/Tracking
 
