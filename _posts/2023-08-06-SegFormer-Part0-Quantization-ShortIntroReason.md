@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  SegFormer Quantization Part 1 Short Intro
+title:  SegFormer Quantization Part 1 Short Intro and Reason
 excerpt: 
 categories: [ml, theory, transformer, attention, embedding, encoding, tensor, quantization]
 ---
 
-# SegFormer Quantization, Part 1 Introduction
+# SegFormer Quantization, Part 1 Introduction and Reason
 
 ## Purpose
 
