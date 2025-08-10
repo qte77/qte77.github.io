@@ -7,7 +7,7 @@ categories: [ml, ai, agents, eval]
 
 # Papers Meta Review
 
-This is a meta review for the project [Agents-eval](https://github.com/qte77/Agents-eval) using the papers in [Further Reading](https://github.com/qte77/Agents-eval/blob/main/further_reading.md). Generated with help provided by Claude Sonnet 4 🙏🏼🌟🙌🏼💕🤗
+This is a meta review for the project [Agents-eval](https://github.com/qte77/Agents-eval) using the papers in [Further Reading](https://github.com/qte77/Agents-eval/blob/main/docs/papers/further_reading.md). Generated with help provided by Claude Sonnet 4 🙏🏼🌟🙌🏼💕🤗
 
 ## Summary
 Current State of Agentic AI Evaluation: The field demonstrates rapid evolution from traditional LLM evaluation toward sophisticated frameworks for autonomous agents. Research spans from foundational evaluation methodologies to highly specialized domain-specific assessments.
