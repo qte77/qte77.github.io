@@ -7,7 +7,7 @@ categories: [ml, ai, agents, eval]
 
 # Comprehensive Analysis: Individual Paper Summaries
 
-Following paper reviews are based on the papers contained in [Further Reading](https://github.com/qte77/Agents-eval/blob/main/further_reading.md).
+Following paper reviews are based on the papers contained in [Further Reading](https://github.com/qte77/Agents-eval/blob/main/docs/papers/further_reading.md).
 Refer to the [Paper Visualization](https://claude.ai/public/artifacts/7761a54c-f49b-486b-9e28-7aa2de8b3c86) which was inspired by [Paperscape](https://papescape.org).
 This summery aims to enhance the project [Agents-eval](https://github.com/qte77/Agents-eval) and was generated with help provided by Claude Sonnet 4 🙏🏼🌟🙌🏼💕🤗
 
