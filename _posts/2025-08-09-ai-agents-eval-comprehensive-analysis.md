@@ -1,3 +1,10 @@
+---
+layout: post
+title: AI Agents-eval Comprehensive Analysis
+excerpt: 
+categories: [ml, ai, agents, eval]
+---
+
 # Comprehensive Analysis: Individual Paper Summaries
 
 Following paper reviews are based on the papers contained in [Further Reading](https://github.com/qte77/Agents-eval/blob/main/further_reading.md).
