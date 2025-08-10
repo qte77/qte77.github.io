@@ -1,4 +1,11 @@
-# Meta Review
+---
+layout: post
+title: AI Agents-eval Papers Meta Review
+excerpt: 
+categories: [ml, ai, agents, eval]
+---
+
+# Papers Meta Review
 
 This is a meta review for in regards to the project [Agents-eval](https://github.com/qte77/Agents-eval) using the papers in [Further Reading](https://github.com/qte77/Agents-eval/blob/main/further_reading.md). Generated with help provided by Claude Sonnet 4 🙏🏼🌟🙌🏼💕🤗
 
