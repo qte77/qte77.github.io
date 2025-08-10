@@ -7,7 +7,7 @@ categories: [ml, ai, agents, eval]
 
 # Enhancement Recommendations for Agents-eval Project
 
-This proposition is based on [Comprehensive Analysis](https://github.com/qte77/qte77.github.io/blob/master/_posts/2025-08-09-ai-agents-eval-comprehensive-analysis.md) and [Meta Review](https://github.com/qte77/qte77.github.io/blob/master/_posts/2025-08-09-ai-agents-eval-papers-meta-review.md) of the papers contained in [Further Reading](https://github.com/qte77/Agents-eval/blob/main/further_reading.md).
+This proposition is based on [Comprehensive Analysis](https://github.com/qte77/qte77.github.io/blob/master/_posts/2025-08-09-ai-agents-eval-comprehensive-analysis.md) and [Meta Review](https://github.com/qte77/qte77.github.io/blob/master/_posts/2025-08-09-ai-agents-eval-papers-meta-review.md) of the papers contained in [Further Reading](https://github.com/qte77/Agents-eval/blob/main/docs/papers/further_reading.md).
 It aims to enhance the project [Agents-eval](https://github.com/qte77/Agents-eval) and was generated with help provided by Claude Sonnet 4 🙏🏼🌟🙌🏼💕🤗
 
 ##  Core Framework Enhancements
