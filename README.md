@@ -1,6 +1,6 @@
 # qte77.github.io
 
-Personal blog — live at [qte77.github.io](https://qte77.github.io).
+Account blog — live at [qte77.github.io](https://qte77.github.io).
 
 Notes on AI agents, ML, evaluation, GitHub Actions, and lab automation —
 accompanying the work at [github.com/qte77](https://github.com/qte77).
