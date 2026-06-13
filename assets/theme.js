@@ -8,7 +8,7 @@
   if (!btn) return;
 
   var ORDER = ['auto', 'light', 'dark'];
-  var LABEL = { auto: 'Auto', light: 'Light', dark: 'Dark' };
+  var LABEL = { auto: '◐ Auto', light: '☀︎ Light', dark: '☾︎ Dark' };
 
   function current() {
     try {
