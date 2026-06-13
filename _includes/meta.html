@@ -12,3 +12,11 @@
 
 {% assign seo_keywords = page.keywords | default: site.keywords %}
 {% if seo_keywords %}<meta name='keywords' content='{{ seo_keywords }}'>{% endif %}
+
+{% comment %} seo-tag omits twitter:description, and emits og/twitter image only when a page sets `image`; fill those gaps (image falls back to site.image). {% endcomment %}
+{% assign seo_desc = page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 200 %}
+{% if seo_desc %}<meta name='twitter:description' content='{{ seo_desc }}'>{% endif %}
+{% unless page.image %}{% if site.image %}
+<meta property='og:image' content='{{ site.image }}'>
+<meta name='twitter:image' content='{{ site.image }}'>
+{% endif %}{% endunless %}
