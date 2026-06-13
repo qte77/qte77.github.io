@@ -137,7 +137,7 @@ h2 {
 }
 
 @media (min-width: 769px){
-	.post h2::before, .post h2::after {
+	.post .entry h2::before, .post .entry h2::after {
 	    content: "";
 	    display: inline-block;
 	    vertical-align: middle;
@@ -155,6 +155,64 @@ h3 {
 h4 {
   font-size: 18px;
   color: var(--text);
+}
+
+// Accessibility (WCAG 2.2 AA): screen-reader-only text, skip link, focus
+// rings, motion opt-out, plus the index post-title size kept after h1 -> h2
+// and the site-name link colour kept after h1 -> p.
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  padding: 8px 14px;
+  background: var(--surface);
+  color: var(--link);
+  border: 1px solid var(--border);
+  border-radius: 0 0 4px 0;
+
+  &:focus {
+    left: 0;
+  }
+}
+
+a:focus-visible,
+button:focus-visible,
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+.site-name a {
+  color: inherit;
+}
+
+.post-list-title {
+  font-size: 30px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 p {

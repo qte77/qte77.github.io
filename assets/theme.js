@@ -8,7 +8,10 @@
   if (!btn) return;
 
   var ORDER = ['auto', 'light', 'dark'];
-  var LABEL = { auto: '◐ Auto', light: '☀︎ Light', dark: '☾︎ Dark' };
+  var WORD = { auto: 'Auto', light: 'Light', dark: 'Dark' };
+  // Decorative monochrome glyphs (text presentation via U+FE0E). The
+  // accessible name uses the word only, set via aria-label/title below.
+  var GLYPH = { auto: '◐', light: '☀︎', dark: '☾︎' };
 
   function current() {
     try {
@@ -32,8 +35,9 @@
         localStorage.setItem('theme', mode);
       }
     } catch (e) {}
-    btn.textContent = LABEL[mode];
-    btn.setAttribute('aria-label', 'Color theme: ' + LABEL[mode] + ' (click to change)');
+    btn.textContent = GLYPH[mode] + ' ' + WORD[mode];
+    btn.setAttribute('aria-label', 'Color theme: ' + WORD[mode] + ' (click to change)');
+    btn.title = 'Color theme: ' + WORD[mode];
   }
 
   apply(current());
