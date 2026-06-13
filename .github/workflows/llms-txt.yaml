@@ -1,0 +1,65 @@
+---
+# Auto-generate /llms.txt from .github/templates/llms.txt.tpl via the
+# qte77/gha-llms-txt-action composite action. Triggers on changes to the
+# template, the README headline (${PROJECT_NAME}), and the workflow itself.
+# Manual workflow_dispatch supported.
+#
+# The action validates every ${BLOB}/path link points to an existing file,
+# substitutes ${BLOB} / ${PROJECT_NAME} / ${PROJECT_DESC} via envsubst,
+# writes /llms.txt at repo root, and (this workflow) opens an auto/llms-txt-
+# update-* PR against master when the rendered output drifts from disk.
+#
+# Action pin: qte77/gha-llms-txt-action@v0.1.0 ->
+#   commit 7cb4f03bd69a23c0e561ce76e926cadc0d3d3b9f.
+# create_pr=false is set on the action because its built-in PR step
+# hardcodes --base main; we open the PR ourselves against master.
+
+name: llms-txt
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/templates/llms.txt.tpl"
+      - ".github/workflows/llms-txt.yaml"
+      - "README.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: llms-txt
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    name: regenerate llms.txt from template
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10  # v6.0.3
+
+      - id: llms
+        uses: qte77/gha-llms-txt-action@7cb4f03bd69a23c0e561ce76e926cadc0d3d3b9f  # v0.1.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          output_path: llms.txt
+          default_branch: master
+          create_pr: false
+
+      - name: Open PR against master
+        if: steps.llms.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          BRANCH="auto/llms-txt-update-$(date +%Y%m%d-%H%M%S)"
+          git checkout -b "$BRANCH"
+          git add llms.txt
+          git commit -m "docs: update llms.txt"
+          git push -u origin "$BRANCH"
+          gh pr create --base master --head "$BRANCH" \
+            --title "docs: update llms.txt" \
+            --body "Auto-generated llms.txt update by [qte77/gha-llms-txt-action](https://github.com/qte77/gha-llms-txt-action)."
