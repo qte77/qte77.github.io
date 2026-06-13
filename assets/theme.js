@@ -9,9 +9,10 @@
 
   var ORDER = ['auto', 'light', 'dark'];
   var WORD = { auto: 'Auto', light: 'Light', dark: 'Dark' };
-  // Decorative monochrome glyphs (text presentation via U+FE0E). The
-  // accessible name uses the word only, set via aria-label/title below.
-  var GLYPH = { auto: '◐', light: '☀︎', dark: '☾︎' };
+  // Monochrome geometric glyphs (Geometric Shapes block) that render reliably
+  // as text across fonts: half / hollow / filled circle. Decorative only --
+  // the accessible name uses the word via aria-label/title below.
+  var GLYPH = { auto: '◐', light: '○', dark: '●' };
 
   function current() {
     try {
