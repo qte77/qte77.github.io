@@ -450,7 +450,10 @@ p > img {
 
 nav {
   clear: both;
-  margin-top: 44px;
+  // margin-top is absorbed by clearance when the nav clears the floated
+  // masthead; use padding-top for a reliable gap above the menu.
+  margin-top: 0;
+  padding-top: 40px;
   font-family: $helveticaNeue;
   font-size: 18px;
   display: flex;
