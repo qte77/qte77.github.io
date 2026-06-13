@@ -27,3 +27,24 @@ ML · agents · evaluation · Python · GitHub Actions · lab automation · Clau
 
 - [RSS](/feed.xml)
 - [Sitemap](/sitemap.xml)
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "qte77",
+  "url": "https://qte77.github.io",
+  "sameAs": [
+    "https://github.com/qte77"
+  ],
+  "knowsAbout": [
+    "AI agents",
+    "agent evaluation",
+    "agentic development",
+    "Claude Code",
+    "GitHub Actions",
+    "lab automation",
+    "machine learning"
+  ]
+}
+</script>
