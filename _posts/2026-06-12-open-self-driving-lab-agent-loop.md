@@ -5,7 +5,7 @@ excerpt: We build autonomous, self-evaluating agents — and we're building the 
 categories: [agents, ml, biolab, automation]
 ---
 
-**TL;DR.** We build autonomous, self-evaluating agent systems. We are now building the hardest version of that idea — an open, sub-$1k self-driving lab whose goal is a closed `perceive → decide → act → record` loop an agent runs unattended. Being honest about stage is part of the point: today the **motion layer ships** (a working pipetting gantry, hardware-validated — [`i3mega-pipettebot`][pipettebot]) and our **software-side evaluation framework is real** ([`Agents-eval`][agents-eval]); the **closed, agent-decided loop is what we are building now** — not a result we are reporting. This post is the thesis and the plan, with the one piece that already works. The AI scientist's missing half is not the science model; it is the agent: autonomous enough to execute, trustworthy enough to believe.
+**TL;DR.** We build autonomous, self-evaluating agent systems. We are now building the hardest version of that idea — an open, sub-$1k self-driving lab whose goal is a closed `perceive → decide → act → record` loop an agent runs unattended. Being honest about stage is part of the point: today the **motion layer ships** (a working pipetting gantry, hardware-validated — [`i3mega-pipettebot`][pipettebot]) and our **software-side evaluation framework is real** ([`Agents-eval`][agents-eval]); the **closed, agent-decided loop is the next step** — not a result we are reporting. This post is the thesis and the plan, with the one piece that already works. The AI scientist's missing half is not the science model; it is the agent: autonomous enough to execute, trustworthy enough to believe.
 
 ## The thesis
 
@@ -22,6 +22,8 @@ We are deliberate about not reporting results we do not have. Two things are gen
 
 A third piece is scaffold, and we will call it that: [`so101-biolab-automation`][so101] runs its workflow layer in software stub-mode and ships an eLabFTW client module — but its own README opens with "PROTOTYPE — hardware untested, CAD approximate." It is not a validated robot yet.
 
+This post also isn't about our computational discovery work — the in-silico side (docking, ADMET, molecular dynamics) runs separately. Here the focus is the harder, still-open half: closing an autonomous loop on a physical bench.
+
 ## What we're building
 
 The self-driving lab is a build in progress. The target loop, with honest status on each link:
@@ -36,7 +38,7 @@ record    →  reads + decisions stream to an eLabFTW notebook            [clien
 
 The honest center of gravity is the **decide** step — an agent that picks volumes live from measurements instead of running a script. It is the piece we are building, and it does not exist yet; the perception it would read from — our own vision tooling, [CellPlateVision][cpv] (image-based plate perception) or [vlm-toolkit][vlm] (a YOLO-to-GGUF-VLM pipeline, currently draft, pre-`v0.1.0`) — still has to be pointed at the dye readout and wired in. The closed loop has not run. Our target for a successful run is to converge a well to within ±5% of a dye-signal target in three or fewer iterations, unattended — the goal we are building toward, not a measured result.
 
-The testbed is food dye, read by camera: safe, vivid, fume-hood-free, and enough to prove the one thing that matters — that an agent can drive a measurement to a target without being told how. We are automation and agent engineers, not bench scientists; there are no drug-discovery claims here.
+The testbed is food dye, read by camera: safe, vivid, fume-hood-free, and enough to prove the one thing that matters — that an agent can drive a measurement to a target without being told how. We are automation and agent engineers, not wet-lab scientists; our drug-discovery work is the separate computational pipeline noted above, and this physical lab loop makes no wet-lab assay claims — its testbed is food dye.
 
 ## Why this is an agent problem, not a control problem
 
@@ -82,15 +84,15 @@ The proof point we are working toward is a single closed loop: one live converge
 
 The bigger picture: the AI-scientist conversation concentrates almost entirely on the science model — structure prediction, generative chemistry, literature synthesis. The infrastructure for that model to actually *do* science is largely missing. Running an experiment is not a single tool call; it is a multi-step agent problem with physical stakes, measurement noise, and decisions that need auditing after the fact.
 
-We are not building a drug-discovery pipeline. We are building the agent infrastructure a discovery pipeline would need — a loop that can plan an experiment, execute it on real hardware, evaluate its own output honestly, and report results an operator can trust. That is the problem we know how to work on. The lab is where we are testing whether our answer holds — and we will report what it does, not what we hoped.
+This lab is not the drug-discovery pipeline — that runs separately, in silico. Here we are building the agent infrastructure a discovery pipeline needs at the bench — a loop that can plan an experiment, execute it on real hardware, evaluate its own output honestly, and report results an operator can trust. That is the problem we know how to work on. The lab is where we are testing whether our answer holds — and we will report what it does, not what we hoped.
 
 ## Quick answers
 
-**Has the loop run yet?** No. The gantry ships and our evaluation framework is real; the closed, agent-decided loop is what we are building. We do not report results we do not have.
+**Has the loop run yet?** No. The gantry ships and our evaluation framework is real; the closed, agent-decided loop is the next step. We do not report results we do not have.
 
-**What is actually built?** The pipetting gantry (hardware-validated) and the software-side evaluation framework. The colorimeter and the decide-agent are the active build.
+**What is actually built?** The pipetting gantry (hardware-validated) and the software-side evaluation framework. The colorimeter and the decide-agent are the next step.
 
-**Is this drug discovery?** No — agent infrastructure. The testbed is food dye, not assays.
+**Is this drug discovery?** This lab loop is agent infrastructure — testbed is food dye, not assays. (Our computational discovery work runs as a separate in-silico track.)
 
 **Why publish before it runs?** Because the thesis and the design are the point, and because being honest about stage is the same discipline we apply to agents.
 
