@@ -6,6 +6,8 @@ on:
     branches: [master]
   pull_request:
     branches: [master]
+  schedule:
+    - cron: "0 0 * * 0"  # weekly — catches external link rot push/PR doesn't see
   workflow_dispatch:
 
 permissions:
