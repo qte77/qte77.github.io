@@ -1,7 +1,11 @@
 ---
 layout: post
 title: A $150 Pipetting Robot from a Stock 3D Printer
+description: >-
+  Build a 96-well pipetting robot for ~$150 from a used Anycubic i3 Mega and a
+  DLAB dPette+ — unmodified Marlin firmware, Python host control. Apache-2.0.
 excerpt: Turn a used Anycubic i3 Mega + a DLAB dPette+ electronic pipette into a 96-well disposable-tip pipetting robot. Marlin runs unmodified. Python drives. Apache-2.0.
+keywords: pipetting robot, lab automation, 3D printer hack, Anycubic i3 Mega, dPette, Marlin firmware, Python, biolab, open hardware
 categories: [biolab, automation, hardware, python]
 ---
 
