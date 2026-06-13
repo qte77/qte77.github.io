@@ -4,6 +4,10 @@
 # also link to since-removed third-party pages. Exclusions are grouped below.
 # Tracked in issue #30 (repoint / remove the real dead links in content).
 
+# Resolve root-relative links (e.g. /feed.xml, /sitemap.xml in about.md) against
+# the live site so they check as remote URLs instead of erroring on URL build.
+base_url = "https://qte77.github.io"
+
 # Treat auth / anti-bot / rate-limit walls as success rather than breakage.
 accept = [200, 206, 401, 402, 403, 429]
 
