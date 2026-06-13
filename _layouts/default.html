@@ -5,6 +5,19 @@
     {% seo title=false %}
     {% include meta.html %}
 
+    <script>
+      // Apply the reader's saved theme before first paint to avoid a flash.
+      // "auto" stores nothing and falls back to prefers-color-scheme (CSS).
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'light' || t === 'dark') {
+            document.documentElement.setAttribute('data-theme', t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
@@ -34,6 +47,7 @@
               <a href="{{ site.baseurl }}/search">Search</a>
               <a href="{{ site.baseurl }}/about">About</a>
               <a href="{{ site.baseurl }}/archive">Archive</a>
+              <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Color theme">Auto</button>
             </nav>
           </header>
         </div>
@@ -54,6 +68,7 @@
       </div>
     </div>
 
+    <script src="{{ site.baseurl }}/assets/theme.js"></script>
     {% include analytics.html %}
   </body>
 </html>

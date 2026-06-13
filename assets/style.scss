@@ -16,10 +16,12 @@
 // Brand sans is Inter (see qte77/qte77 brand/DESIGN.md). Not self-hosted —
 // Inter-or-system per the design tokens, with the fallback stack below.
 
-// Theme tokens — qte77 EyeRest brand (qte77/qte77 brand/DESIGN.md). Light
-// defaults; the @media block flips to the dark scheme. Path A
-// (prefers-color-scheme); this CSS-var layer is also Path B's foundation.
-:root {
+// Theme tokens — qte77 EyeRest brand (qte77/qte77 brand/DESIGN.md).
+// Two paths: Path A follows the OS via prefers-color-scheme; Path B lets the
+// reader override it with the nav theme picker, which sets data-theme on
+// <html> (see assets/theme.js). The token sets live in mixins so both paths
+// and the manual overrides stay in sync.
+@mixin theme-light {
   --bg: #ece8d8;
   --surface: #e2dec8;
   --border: #c8c4b0;
@@ -47,35 +49,45 @@
   --code-inline-text: #983828;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #1c1a14;
-    --surface: #242018;
-    --border: #383428;
-    --text: #d8d0b8;
-    --muted: #a89878;
-    --link: #c8a858;
-    --link-hover: #d8b868;
-    --selection-bg: #383428;
-    --selection-text: #d8d0b8;
-    --blockquote-bg: #2a2620;
-    --callout-bg: #20281c;
-    --search-bg: #1c1a14;
-    --table-stripe: #201e18;
-    --pagination-hover-bg: #2c2820;
-    --chip-bg: #2c2820;
-    --form-bg: #242018;
-    --carbon-bg: #1c1a14;
-    --carbon-border: #383428;
-    --tag-bg: #4a6818;
-    --tag-text: #ece8d8;
-    --btn-subscribe-bg: rgba(255, 255, 255, 0.08);
-    --btn-subscribe-text: #d8d0b8;
-    --bar-bg: #c8a858;
-    --code-inline-bg: #242018;
-    --code-inline-text: #ff554a;
-  }
+@mixin theme-dark {
+  --bg: #1c1a14;
+  --surface: #242018;
+  --border: #383428;
+  --text: #d8d0b8;
+  --muted: #a89878;
+  --link: #c8a858;
+  --link-hover: #d8b868;
+  --selection-bg: #383428;
+  --selection-text: #d8d0b8;
+  --blockquote-bg: #2a2620;
+  --callout-bg: #20281c;
+  --search-bg: #1c1a14;
+  --table-stripe: #201e18;
+  --pagination-hover-bg: #2c2820;
+  --chip-bg: #2c2820;
+  --form-bg: #242018;
+  --carbon-bg: #1c1a14;
+  --carbon-border: #383428;
+  --tag-bg: #4a6818;
+  --tag-text: #ece8d8;
+  --btn-subscribe-bg: rgba(255, 255, 255, 0.08);
+  --btn-subscribe-text: #d8d0b8;
+  --bar-bg: #c8a858;
+  --code-inline-bg: #242018;
+  --code-inline-text: #ff554a;
 }
+
+:root { @include theme-light; }
+
+// Path A — follow the OS when the reader has not chosen.
+@media (prefers-color-scheme: dark) {
+  :root { @include theme-dark; }
+}
+
+// Path B — explicit reader choice (data-theme) wins over the OS via higher
+// specificity. "auto" simply removes the attribute and falls back to Path A.
+:root[data-theme="light"] { @include theme-light; }
+:root[data-theme="dark"]  { @include theme-dark; }
 
 html {
   font-size: 100%;
@@ -107,7 +119,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
-  text-align: center;
 
   @include mobile {
     line-height: 1.4;
@@ -418,6 +429,28 @@ nav {
   }
 }
 
+.theme-toggle {
+  margin-left: 20px;
+  padding: 1px 10px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  font: inherit;
+  font-size: 15px;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--link);
+    border-color: var(--link);
+  }
+
+  @include mobile {
+    margin: 0 10px;
+  }
+}
+
 //
 // .main
 //
@@ -509,7 +542,7 @@ body:after {
 
 .post h1{
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  text-align: center;
+  text-align: left;
   font-weight: bold;
   font-kerning: auto;
   font-feature-settings: "kern","liga","dlig","hlig","cswh";
@@ -518,7 +551,7 @@ body:after {
 
 .page h1{
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  text-align: center;
+  text-align: left;
   font-weight: bold;
   font-kerning: auto;
   font-feature-settings: "kern","liga","dlig","hlig","cswh";
@@ -526,13 +559,13 @@ body:after {
 }
 
 .author_title{
-  text-align: center;
+  text-align: left;
   color: var(--muted);
   letter-spacing: 2px;
 }
 
 .post_date{
-  text-align: center;
+  text-align: left;
   color: var(--muted);
 }
 
