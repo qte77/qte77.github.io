@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Static-sites on GH-Pages
-excerpt: 
+excerpt: A reference survey of static-site options for GitHub Pages, comparing small and full Jekyll themes, Gatsby, Sphinx, and ReadTheDocs with links to each tool.
 categories: [statis-sites, gh-pages, jekyll, sphinx, readthedocs, github.io]
 ---
 

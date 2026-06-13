@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  SegFormer Part 3, Quantization Description
-excerpt: 
+excerpt: Describes quantization approaches for SegFormer, covering bitsandbytes 8-bit and NF4 4-bit configurations via BitsAndBytesConfig, and links to HuggingFace, PyTorch, and DeepSpeed quantization resources.
 categories: [writeup, transformer, segformer, quantization, description]
 ---
 

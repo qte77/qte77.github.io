@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  SegFormer Part 2, PoC Difficulties and Errors
-excerpt: 
+excerpt: A log of errors and solutions encountered building a SegFormer PoC notebook, covering label-count mismatches, CUDA out-of-memory errors, device-map issues, and collator bugs during training.
 categories: [writeup, transformer, segformer, difficulties, errors]
 ---
 

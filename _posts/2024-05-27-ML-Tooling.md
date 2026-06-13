@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Collection of Tools for ML
+excerpt: A curated reference list of ML tooling spanning end-to-end AutoML frameworks, EDA libraries, feature engineering tools, hyperparameter tuners, experiment trackers, and exploratory runtimes.
 categories: [ml, tools]
 ---
 
