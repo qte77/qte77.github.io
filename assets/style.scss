@@ -136,18 +136,6 @@ h2 {
   font-size: 24px;
 }
 
-@media (min-width: 769px){
-	.post .entry h2::before, .post .entry h2::after {
-	    content: "";
-	    display: inline-block;
-	    vertical-align: middle;
-	    width: 46px;
-	    height: 1px;
-	    background: var(--border);
-	    margin: 0px 30px;
-	}
-}
-
 h3 {
   font-size: 20px;
 }
@@ -462,7 +450,7 @@ p > img {
 
 nav {
   clear: both;
-  margin-top: 15px;
+  margin-top: 28px;
   font-family: $helveticaNeue;
   font-size: 18px;
   display: flex;
