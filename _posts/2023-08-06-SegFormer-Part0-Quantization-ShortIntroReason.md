@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  SegFormer Quantization Part 1 Short Intro and Reason
-excerpt: 
+excerpt: Introduction to a series on quantizing the pre-trained SegFormer vision transformer, outlining the goal of reducing model size via 8-bit/4-bit and custom quantization using HuggingFace, PyTorch, and bitsandbytes.
 categories: [ml, theory, transformer, attention, embedding, encoding, tensor, quantization]
 ---
 

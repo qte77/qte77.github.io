@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI Agents Tools List
-excerpt: 
+excerpt: A categorized reference list of AI agent frameworks, research agents, benchmarking tools, execution tracers, and AI-enhanced workflow platforms available as of early 2025.
 categories: [ml, ai, agents, tools,list]
 ---
 

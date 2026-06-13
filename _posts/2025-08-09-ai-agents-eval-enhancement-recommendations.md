@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI Agents-eval Enhancement Recommendations
-excerpt: 
+excerpt: A prioritized roadmap of twelve proposed enhancements for the Agents-eval project, spanning multi-dimensional evaluation architecture, safety-first modules, predictive evaluation, and AgentOps integration.
 categories: [ml, ai, agents, eval]
 ---
 

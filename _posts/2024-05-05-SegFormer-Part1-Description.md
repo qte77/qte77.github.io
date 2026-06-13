@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  SegFormer Part 1, Description
-excerpt: 
+excerpt: Describes the SegFormer setup for semantic segmentation fine-tuning on the MIT ADE20k scene-parsing dataset, detailing the Trainer execution order from on-the-fly transforms through metric computation.
 categories: [writeup, transformer, segformer, description]
 ---
 

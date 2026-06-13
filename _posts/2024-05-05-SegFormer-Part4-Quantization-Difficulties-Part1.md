@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  SegFormer Part 4, Quantization Difficulties and Errors Part 1
-excerpt: 
+excerpt: Documents runtime errors encountered while loading and training quantized SegFormer models, including device_map incompatibilities, half-precision input mismatches, and bitsandbytes 8-bit training failures.
 categories: [writeup, transformer, segformer, quantization, difficulties, errors]
 ---
 

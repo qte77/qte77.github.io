@@ -1,3 +1,10 @@
+---
+layout: post
+title: SegFormer Baseline Fine-Tuning Results
+excerpt: Benchmark results for fine-tuning and half-precision SegFormer (mit-b0) on scene_parse_150, comparing original, fine-tuned, and float16 model variants across IoU and accuracy metrics on GPU T4 and P100.
+categories: [writeup, segformer, quantization, results]
+---
+
 # Resultes fine-tuning pre-trained SegFormer
 
 - [SegFormer-fine-tune-half-baseline.py](https://github.com/qte77/SegFormerQuantization/edit/main/PoC/SegFormer-fine-tune-half-baseline.py)

@@ -1,3 +1,10 @@
+---
+layout: post
+title: GraphJudge: Measuring How Agents Collaborate
+excerpt: GraphJudge is an A2A-compliant multi-agent evaluation framework for the AgentBeats competition that captures interaction traces as directed graphs and scores coordination quality through structural graph metrics, LLM-as-judge qualitative assessment, and text similarity reproducibility checks.
+categories: [agents, eval, ml, ai]
+---
+
 # GraphJudge: Measuring How Agents Collaborate
 
 > Measure how, not just whether

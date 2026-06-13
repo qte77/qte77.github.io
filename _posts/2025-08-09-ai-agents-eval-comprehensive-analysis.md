@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI Agents-eval Comprehensive Analysis
-excerpt: 
+excerpt: Per-paper summaries of 50+ agent evaluation research papers from 2023 to 2025, assessing each work's evaluation approach, focus area, relevance to the Agents-eval project, and a concrete integration example.
 categories: [ml, ai, agents, eval]
 ---
 

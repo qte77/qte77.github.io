@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI Agents-eval Papers Meta Review
-excerpt: 
+excerpt: A meta-review of 50+ agentic AI evaluation papers identifying key dimensions — autonomy, multi-agent coordination, safety, and explainability — and critical gaps in standardization and long-term behavioral assessment.
 categories: [ml, ai, agents, eval]
 ---
 

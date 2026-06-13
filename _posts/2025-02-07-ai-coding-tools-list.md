@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  AI Coding Tools List
-excerpt: 
+excerpt: A reference list of AI-assisted coding tools covering bug search, IDE and terminal integrations, infrastructure provisioning, full-stack builders, and UI development assistants as of early 2025.
 categories: [ml, ai, coding, tools, list]
 ---
 
