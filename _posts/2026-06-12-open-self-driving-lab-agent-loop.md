@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building a Trustworthy Agent Loop for a Physical Lab
-excerpt: We build autonomous, self-evaluating agents — and we're building the hardest version of that idea: an open, sub-$1k self-driving lab. This is the thesis, the plan, and the one piece that already ships. The AI scientist's missing half is the agent, not the model.
+excerpt: We build autonomous, self-evaluating agents — and we're building the hardest version of that idea, an open sub-$1k self-driving lab. This is the thesis, the plan, and the one piece that already ships. The AI scientist's missing half is the agent, not the model.
 categories: [agents, ml, biolab, automation]
 ---
 
