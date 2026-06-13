@@ -403,36 +403,33 @@ p > img {
 }
 
 nav {
-  float: right;
-  margin-top: 23px;
+  clear: both;
+  margin-top: 15px;
   font-family: $helveticaNeue;
   font-size: 18px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 20px;
 
   @include mobile {
-    float: none;
     margin-top: 9px;
-    display: block;
     font-size: 16px;
+    justify-content: center;
   }
 
   a {
-    margin-left: 20px;
     color: var(--text);
-    text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
 
     @include mobile {
-      margin: 0 10px;
       color: var(--link);
     }
   }
 }
 
 .theme-toggle {
-  margin-left: 20px;
   padding: 2px 9px;
   background: transparent;
   border: 1px solid var(--border);
@@ -448,10 +445,6 @@ nav {
   &:hover {
     color: var(--link);
     border-color: var(--link);
-  }
-
-  @include mobile {
-    margin: 0 10px;
   }
 }
 
