@@ -19,6 +19,24 @@ Types of changes:
 - Things to come
 - Move to new version section if completed
 
+## [1.0.0] - 2026-06-19
+
+Decoupled from the upstream Reverie fork into a standalone, first-party theme.
+
+### Added
+
+- EyeRest warm, zero-blue theme (light/dark) and self-hosted brand fonts (Inter + JetBrains Mono)
+- Per-post SEO/GEO front matter (description, keywords, OG images) and post-to-post cross-links
+- Agent-loop diagram (SVG hero + PNG OG card)
+
+### Changed
+
+- Reframed as a first-party theme; LICENSE adds a qte77 copyright alongside the original Reverie MIT notice
+
+### Removed
+
+- Unused Reverie/Jekyll-Now theme leftovers (default fonts, pullquote include, highlights partial, duplicate markdownlint config)
+
 ## [0.4.0] - 2022-08-04
 
 ### Added
