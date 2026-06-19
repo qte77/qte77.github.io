@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="g" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b8a878"/>
+    </marker>
+    <marker id="gr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#983828"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="630" fill="#ffffff"/>
+
+  <text x="600" y="50" text-anchor="middle" font-size="32" font-weight="700" fill="#2c2818">Built before it had a name</text>
+  <text x="600" y="84" text-anchor="middle" font-size="17" fill="#6b6040">when the buzzword was coined vs. when qte77 shipped it</text>
+
+  <!-- rail captions -->
+  <text x="92" y="190" font-size="13" font-weight="600" fill="#787010">term coined / went viral</text>
+  <text x="92" y="540" font-size="13" font-weight="600" fill="#7a6010">qte77 shipped</text>
+
+  <!-- time axis -->
+  <line x1="90" y1="345" x2="1110" y2="345" stroke="#c8c4b0" stroke-width="2"/>
+  <g font-size="12" fill="#8a7848" text-anchor="middle">
+    <line x1="100" y1="340" x2="100" y2="350" stroke="#c8c4b0" stroke-width="2"/><text x="100" y="368">Jun &#8217;25</text>
+    <line x1="331" y1="340" x2="331" y2="350" stroke="#c8c4b0" stroke-width="2"/><text x="331" y="368">Sep</text>
+    <line x1="562" y1="340" x2="562" y2="350" stroke="#c8c4b0" stroke-width="2"/><text x="562" y="368">Dec</text>
+    <line x1="793" y1="340" x2="793" y2="350" stroke="#c8c4b0" stroke-width="2"/><text x="793" y="368">Mar &#8217;26</text>
+    <line x1="1024" y1="340" x2="1024" y2="350" stroke="#c8c4b0" stroke-width="2"/><text x="1024" y="368">Jun &#8217;26</text>
+  </g>
+
+  <!-- harness cluster span (Jan-Apr 2026) -->
+  <rect x="639" y="392" width="261" height="6" rx="3" fill="#587818" opacity="0.5"/>
+  <text x="788" y="430" text-anchor="middle" font-size="12.5" fill="#2c2818">harness cluster</text>
+  <text x="788" y="448" text-anchor="middle" font-size="11" fill="#8a7848">Jan&#8211;Apr &#8217;26 (plugins, recursion, eval, senses)</text>
+
+  <!-- connectors dot-to-axis -->
+  <line x1="100" y1="295" x2="100" y2="345" stroke="#e0dac8" stroke-width="1.5"/>
+  <line x1="690" y1="295" x2="690" y2="345" stroke="#e0dac8" stroke-width="1.5"/>
+  <line x1="1024" y1="295" x2="1024" y2="345" stroke="#e0dac8" stroke-width="1.5"/>
+  <line x1="177" y1="345" x2="177" y2="395" stroke="#e0dac8" stroke-width="1.5"/>
+  <line x1="639" y1="345" x2="639" y2="395" stroke="#e0dac8" stroke-width="1.5"/>
+
+  <!-- gap arrows -->
+  <line x1="103" y1="324" x2="174" y2="324" stroke="#b8a878" stroke-width="2" marker-start="url(#g)" marker-end="url(#g)"/>
+  <text x="138" y="316" text-anchor="middle" font-size="11" fill="#6b6040">~3 wks</text>
+  <line x1="642" y1="324" x2="1021" y2="324" stroke="#983828" stroke-width="2" marker-start="url(#gr)" marker-end="url(#gr)"/>
+  <text x="831" y="316" text-anchor="middle" font-size="12.5" font-weight="600" fill="#983828">ralph-loop shipped ~5 months before the term went viral</text>
+
+  <!-- buzzword dots + labels (above) -->
+  <circle cx="100" cy="295" r="6" fill="#787010"/>
+  <text x="96" y="246" text-anchor="start" font-size="13.5" font-weight="700" fill="#5a4810">&#8220;context engineering&#8221;</text>
+  <text x="96" y="264" text-anchor="start" font-size="11" fill="#8a7848">L&#252;tke / Karpathy</text>
+
+  <circle cx="690" cy="295" r="6" fill="#787010"/>
+  <text x="690" y="232" text-anchor="middle" font-size="13.5" font-weight="700" fill="#5a4810">&#8220;harness engineering&#8221;</text>
+  <text x="690" y="250" text-anchor="middle" font-size="11" fill="#8a7848">Anthropic harness posts</text>
+
+  <circle cx="1024" cy="295" r="6" fill="#787010"/>
+  <text x="1030" y="246" text-anchor="end" font-size="13.5" font-weight="700" fill="#5a4810">&#8220;loop engineering&#8221; viral</text>
+  <text x="1030" y="264" text-anchor="end" font-size="11" fill="#8a7848">Steinberger</text>
+
+  <!-- build dots + labels (below) -->
+  <circle cx="177" cy="395" r="6" fill="#7a6010"/>
+  <text x="150" y="478" text-anchor="start" font-size="12.5" font-weight="700" fill="#2c2818">context-engineering-template</text>
+  <text x="150" y="496" text-anchor="start" font-size="11" fill="#8a7848">Jul &#8217;25</text>
+
+  <circle cx="639" cy="395" r="8" fill="#7a6010"/>
+  <text x="639" y="478" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2c2818">ralph-loop</text>
+  <text x="639" y="496" text-anchor="middle" font-size="11" fill="#8a7848">Jan &#8217;26</text>
+
+  <text x="1166" y="612" text-anchor="end" font-size="13" fill="#cfc6ac">qte77.github.io</text>
+</svg>
