@@ -100,8 +100,9 @@ acceleration via M203/M201/M204/M205 for liquid-handling-friendly moves.
 
 ## Companion tools
 
-A pipetting robot is one node in a wet-lab loop. Two siblings cover the
-gaps:
+A pipetting robot is one node in a wet-lab loop — the motion layer of a
+larger, still-in-progress [self-driving-lab agent loop][agent-loop-post].
+Two siblings cover the gaps:
 
 - [`so101-biolab-automation`][so101] — dual SO-101 robot arm that
   retrieves the used-tips bin from the deck after the i3 homes. The gantry
@@ -167,6 +168,7 @@ family from `M115` and dispatches per platform.
   depends on.
 
 [repo]: https://github.com/qte77/i3mega-pipettebot
+[agent-loop-post]: /open-self-driving-lab-agent-loop/
 [cycle-gif]: https://raw.githubusercontent.com/qte77/i3mega-pipettebot/main/assets/images/dpette%2Bi3_full_cycle.gif
 [driver]: https://github.com/Lambda-Biolab/dpette-usb-driver
 [so101]: https://github.com/qte77/so101-biolab-automation

@@ -17,7 +17,7 @@ Software environments are forgiving. A physical lab is not — reagents run out,
 
 We are deliberate about not reporting results we do not have. Two things are genuinely shipped:
 
-- **The motion layer.** [`i3mega-pipettebot`][pipettebot] turns a ~$150 repurposed 3D printer into a pipetting gantry, with real aspirate/dispense demonstrated on hardware (i3 Mega and Geeetech A30), 121 tests, and tagged releases. It moves a pipette to any well and dispenses. That part works.
+- **The motion layer.** [`i3mega-pipettebot`][pipettebot] turns a ~$150 repurposed 3D printer into a pipetting gantry, with real aspirate/dispense demonstrated on hardware (i3 Mega and Geeetech A30), 121 tests, and tagged releases. It moves a pipette to any well and dispenses. That part works — [full build write-up][pipettebot-post].
 - **The evaluation discipline, on the software side.** [`Agents-eval`][agents-eval] is our multi-agent evaluation framework — objective, multi-tier scoring of agent outputs. Our "do not trust an agent you cannot evaluate" stance is already code there, not aspiration.
 
 A third piece is scaffold, and we will call it that: [`so101-biolab-automation`][so101] runs its workflow layer in software stub-mode and ships an eLabFTW client module — but its own README opens with "PROTOTYPE — hardware untested, CAD approximate." It is not a validated robot yet.
@@ -104,6 +104,7 @@ This lab is not the drug-discovery pipeline — that runs separately, in silico.
 
 [agents-eval]: https://github.com/qte77/Agents-eval
 [pipettebot]: https://github.com/qte77/i3mega-pipettebot
+[pipettebot-post]: /pipettebot-sub-150-pipetting-robot/
 [so101]: https://github.com/qte77/so101-biolab-automation
 [cpv]: https://github.com/lambda-biolab/CellPlateVision
 [vlm]: https://github.com/qte77/vlm-toolkit
