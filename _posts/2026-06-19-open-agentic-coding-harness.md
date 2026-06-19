@@ -112,10 +112,9 @@ Not a priority claim — the ideas were in the air and others coined the words. 
 ## Acknowledgements
 
 - **Geoffrey Huntley** — the [Ralph technique][ralph-technique] the loop is named for.
-- **HumanLayer** — the [advanced context engineering for coding agents (ACE-FCA)](https://www.hlyr.dev/blog) methodology the harness's context-management rules build on.
+- **HumanLayer** — a body of [context-engineering writing](https://www.hlyr.dev/blog) the harness leans on: ACE-FCA (the basis of its context-management rules), the instruction-budget and context-efficient-backpressure ideas, and [12-factor agents](https://www.hlyr.dev/blog/12-factor-agents) — surveyed in depth in [`ai-agents-research`][ai-research].
 - **Anthropic** — Claude Code, and the long-running-agent harness guidance.
 - The open models behind `cc-senses` — Kokoro, Piper, Moonshine, Vosk, Moondream2, and Qwen-VL.
-- **Vibe Kanban** — the live task board the loop syncs to.
 
 [ralph]: https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template
 [plugins]: https://github.com/qte77/claude-code-plugins
