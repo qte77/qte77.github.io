@@ -6,10 +6,13 @@ description: >-
   agent loop on real lab hardware. The motion layer ships; the decide-agent is next.
 excerpt: We build autonomous, self-evaluating agents — and we're building the hardest version of that idea, an open sub-$1k self-driving lab. This is the thesis, the plan, and the one piece that already ships. The AI scientist's missing half is the agent, not the model.
 keywords: self-driving lab, autonomous agents, agent loop, lab automation, biolab, pipetting robot, agent evaluation, AI scientist, open hardware, qte77
+image: /images/agent-loop-diagram.png
 categories: [agents, ml, biolab, automation]
 ---
 
 **TL;DR.** We build autonomous, self-evaluating agent systems. We are now building the hardest version of that idea — an open, sub-$1k self-driving lab whose goal is a closed `perceive → decide → act → record` loop an agent runs unattended. Being honest about stage is part of the point: today the **motion layer ships** (a working pipetting gantry, hardware-validated — [`i3mega-pipettebot`][pipettebot]) and our **software-side evaluation framework is real** ([`Agents-eval`][agents-eval]); the **closed, agent-decided loop is the next step** — not a result we are reporting. This post is the thesis and the plan, with the one piece that already works. The AI scientist's missing half is not the science model; it is the agent: autonomous enough to execute, trustworthy enough to believe.
+
+![The target agent loop for a physical lab — perceive, decide, act, record — with honest per-step status][loop-diagram]
 
 ## The thesis
 
@@ -106,6 +109,7 @@ This lab is not the drug-discovery pipeline — that runs separately, in silico.
 - **eLabFTW** for the open electronic lab notebook.
 - The **Marlin** firmware project — the unmodified target the gantry depends on.
 
+[loop-diagram]: /images/agent-loop-diagram.svg
 [agents-eval]: https://github.com/qte77/Agents-eval
 [pipettebot]: https://github.com/qte77/i3mega-pipettebot
 [pipettebot-post]: /pipettebot-sub-150-pipetting-robot/
