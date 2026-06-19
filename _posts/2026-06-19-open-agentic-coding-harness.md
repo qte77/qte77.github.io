@@ -98,6 +98,7 @@ A clean read: build the **loop** (Jan), **arm** it (Feb), then in a single March
 ## Acknowledgements
 
 - **Geoffrey Huntley** — the [Ralph technique][ralph-technique] the loop is named for.
+- **HumanLayer** — the [advanced context engineering for coding agents (ACE-FCA)](https://www.hlyr.dev/blog) methodology the harness's context-management rules build on.
 - **Anthropic** — Claude Code, and the long-running-agent harness guidance.
 - The open models behind `cc-senses` — Kokoro, Piper, Moonshine, Vosk, Moondream2, and Qwen-VL.
 - **Vibe Kanban** — the live task board the loop syncs to.
