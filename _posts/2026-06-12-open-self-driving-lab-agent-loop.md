@@ -1,7 +1,11 @@
 ---
 layout: post
 title: Building a Trustworthy Agent Loop for a Physical Lab
+description: >-
+  An open, sub-$1k self-driving lab: an autonomous perceive→decide→act→record
+  agent loop on real lab hardware. The motion layer ships; the decide-agent is next.
 excerpt: We build autonomous, self-evaluating agents — and we're building the hardest version of that idea, an open sub-$1k self-driving lab. This is the thesis, the plan, and the one piece that already ships. The AI scientist's missing half is the agent, not the model.
+keywords: self-driving lab, autonomous agents, agent loop, lab automation, biolab, pipetting robot, agent evaluation, AI scientist, open hardware, qte77
 categories: [agents, ml, biolab, automation]
 ---
 
