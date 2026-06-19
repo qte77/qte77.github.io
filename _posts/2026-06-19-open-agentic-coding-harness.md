@@ -19,7 +19,7 @@ categories: [agents, ai, eval, tooling]
 
 The spine is a Bash-driven autonomous loop. [`ralph-loop-cc-tdd-wt-vibe-kanban-template`][ralph] picks the next story from a `prd.json`, drives Claude Code through a **Red → Green → Refactor** cycle (it refuses to mark a story done without a failing-test `[RED]` commit before the `[GREEN]` implementation), runs `make validate`, retries up to three times, and loops until every story passes. With `N_WT > 1` it runs several agents **in parallel git worktrees**, scores each result (stories passed, test count, coverage, lint penalties), and squash-merges the best — optionally with a Claude-as-judge pass and human approval. A `LEARNINGS.md` is appended after every story and re-read before the next, so knowledge compounds across the run. An optional Vibe Kanban board shows story status live.
 
-It's Geoffrey Huntley's ["Ralph" technique][ralph-technique] — HumanLayer wrote up [a brief history of Ralph][ralph-history] — wired to Claude Code, TDD discipline, and worktree isolation. **Created 2026-01-18** — the first piece, and the center of everything below.
+It's Geoffrey Huntley's ["Ralph" technique][ralph-technique] — he coined it in **July 2025** (a bare `while`-loop re-feeding a fixed prompt), it went mainstream when **Anthropic shipped an official Ralph plugin in December 2025**, and HumanLayer's [brief history][ralph-history] (Jan 2026) tells the full arc. `ralph-loop` (**created 2026-01-18**) isn't Ralph reinvented — it's Ralph wired to Claude Code with TDD discipline and parallel git worktrees, built as the technique went mainstream. It's the first piece of *this* cluster, and the center of everything below.
 
 ## The plugins — `claude-code-plugins`
 
@@ -85,21 +85,22 @@ A clean read: build the **loop** (Jan), **arm** it (Feb), then in a single March
 
 ## Built before it had a name
 
-The vocabulary for this kind of work mostly arrived *after* the work did. Lining up when each term was coined, when HumanLayer documented the discipline, and when the matching repo shipped:
+The vocabulary for this kind of work mostly arrived *after* the work did — though not always. Lining up when each term was coined or hyped, when HumanLayer documented the discipline, and when the matching repo shipped:
 
-![Built before it had a name — buzzword coinage vs. HumanLayer's writing vs. qte77 ship dates][buzz-timeline]
+![Built before it had a name — when terms were coined/hyped vs. HumanLayer's writing vs. qte77 ship dates][buzz-timeline]
 
-| Buzzword | Coined / went viral | qte77 shipped | Gap |
-| -------- | ------------------- | ------------- | --- |
-| Context engineering | [coined Jun 2025][ce-source] (Lütke, then Karpathy) | [`context-engineering-template`][ctx-template] — Jul 2025 | ~3 weeks after |
-| Loop engineering | [named in 2026; viral Jun 2026][loop-source] | [`ralph-loop`][ralph] — Jan 2026 | **~5 months ahead** |
-| Harness engineering | [Anthropic's harness posts][harness-source], late 2025–2026 | the harness cluster — Jan–Apr 2026 | in lockstep (ralph-loop cites them) |
+| Term / technique | Coined / hyped | qte77 shipped | Gap |
+| ---------------- | -------------- | ------------- | --- |
+| Context engineering | [coined Jun 2025][ce-source] (Lütke, then Karpathy) | [`context-engineering-template`][ctx-template] — Jul 2025 | ~3 weeks after — fast adopt |
+| Ralph (the technique) | [coined Jul 2025][ralph-technique] (Huntley); hyped Dec 2025 (Anthropic plugin) | [`ralph-loop`][ralph] — Jan 2026 | adopted as it peaked — didn't lead |
+| Loop engineering (the term) | [named 2026; viral Jun 2026][loop-source] | `ralph-loop` — Jan 2026 | **~5 months before the term** |
+| Harness engineering | [Anthropic's harness posts][harness-source], late 2025–2026 | the harness cluster — Jan–Apr 2026 | in lockstep |
 
-Not a priority claim — the ideas were in the air and others coined the words. The point is cadence: *context engineering* adopted within weeks of its naming, a *loop-engineering* harness running months before that phrase went viral, and the *harness* cluster built in step with the literature it cites.
+Not a priority claim — the ideas, and most of the words, were others'. The honest read is **cadence and faithfulness**: *context engineering* adopted within weeks of its coinage; *Ralph* (Huntley's, Jul 2025) implemented as it went mainstream — not before it; the broader *loop-engineering* practice shipped months ahead of that phrase peaking. Fast, faithful adoption, with the occasional genuine lead.
 
 ## Quick answers
 
-**What is the "Ralph loop"?** An autonomous agent loop — pick a story, write a failing test, make it pass, refactor, validate, repeat — popularized by Geoffrey Huntley. `ralph-loop` is a Claude Code + TDD + git-worktree implementation of it.
+**What is the "Ralph loop"?** An autonomous agent loop — pick a story, write a failing test, make it pass, refactor, validate, repeat — coined by Geoffrey Huntley (July 2025) and mainstream by year's end. `ralph-loop` is a Claude Code + TDD + git-worktree implementation of it.
 
 **Do I need all five repos?** No. The loop runs on its own; plugins, senses, recursion, and eval are independent layers you add as needed. They share one idea — Claude Code as the execution engine.
 
