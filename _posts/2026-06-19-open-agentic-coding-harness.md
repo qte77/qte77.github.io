@@ -85,9 +85,9 @@ A clean read: build the **loop** (Jan), **arm** it (Feb), then in a single March
 
 ## Built before it had a name
 
-The vocabulary for this kind of work mostly arrived *after* the work did. Lining up when each term was coined against when the matching repo shipped:
+The vocabulary for this kind of work mostly arrived *after* the work did. Lining up when each term was coined, when HumanLayer documented the discipline, and when the matching repo shipped:
 
-![Built before it had a name — buzzword coinage vs. qte77 ship dates][buzz-timeline]
+![Built before it had a name — buzzword coinage vs. HumanLayer's writing vs. qte77 ship dates][buzz-timeline]
 
 | Buzzword | Coined / went viral | qte77 shipped | Gap |
 | -------- | ------------------- | ------------- | --- |
