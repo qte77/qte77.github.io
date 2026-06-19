@@ -83,11 +83,11 @@ The whole arc, by repository creation date (`git log --max-parents=0`):
 
 A clean read: build the **loop** (Jan), **arm** it (Feb), then in a single March burst add **research**, a **quality benchmark**, **recursion**, and an **evaluator**; give it **senses** and **self-evolving offspring** in April.
 
-## Built before it had a name
+## Ahead of the vocabulary, mostly
 
 The vocabulary for this kind of work mostly arrived *after* the work did — though not always. Lining up when each term was coined or hyped, when HumanLayer documented the discipline, and when the matching repo shipped:
 
-![Built before it had a name — when terms were coined/hyped vs. HumanLayer's writing vs. qte77 ship dates][buzz-timeline]
+![Ahead of the vocabulary, mostly — when terms were coined/hyped vs. HumanLayer's writing vs. qte77 ship dates][buzz-timeline]
 
 | Term / technique | Coined / hyped | qte77 shipped | Gap |
 | ---------------- | -------------- | ------------- | --- |
