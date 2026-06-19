@@ -16,5 +16,7 @@ bundle exec jekyll serve
 
 ## Theme
 
-Built on [Reverie](https://github.com/amitmerchant1990/reverie) (MIT) — a
-fork-friendly Jekyll theme by [Amit Merchant](https://www.amitmerchant.com).
+A custom theme — the EyeRest warm, zero-blue palette (light/dark), self-hosted
+brand fonts (Inter + JetBrains Mono), and bespoke SEO/GEO. Originally
+bootstrapped from [Reverie](https://github.com/amitmerchant1990/reverie) (MIT)
+by [Amit Merchant](https://www.amitmerchant.com), since heavily diverged.
