@@ -7,6 +7,7 @@
 
 @import "reset";
 @import "variables";
+@import "fonts";
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -96,7 +97,7 @@ html {
 
 body {
   background: var(--bg);
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: $sans;
   color: var(--text);
   line-height: 1.7;
   font-weight: 400;
@@ -112,7 +113,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: $sans;
   color: var(--text);
   font-weight: bold;
 
@@ -407,7 +408,7 @@ p > img {
   margin: 0;
   color: var(--text);
   cursor: pointer;
-  font-family: $helveticaNeue;
+  font-family: $sans;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -434,7 +435,7 @@ nav {
   // masthead; use padding-top for a reliable gap above the menu.
   margin-top: 0;
   padding-top: 40px;
-  font-family: $helveticaNeue;
+  font-family: $sans;
   font-size: 18px;
   display: flex;
   align-items: center;
@@ -567,7 +568,7 @@ body:after {
 }
 
 .post h1{
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: $sans;
   text-align: left;
   font-weight: bold;
   font-kerning: auto;
@@ -576,7 +577,7 @@ body:after {
 }
 
 .page h1{
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: $sans;
   text-align: left;
   font-weight: bold;
   font-kerning: auto;
@@ -598,7 +599,7 @@ body:after {
 .cd-container a {
   color: var(--link);
   text-decoration: none;
-  font-family: "Open Sans", sans-serif;
+  font-family: $sans;
 }
 
 .cd-container img {
@@ -606,7 +607,7 @@ body:after {
 }
 
 .cd-container h1, .cd-container h2 {
-  font-family: "Open Sans", sans-serif;
+  font-family: $sans;
   font-weight: bold;
 }
 
@@ -748,7 +749,7 @@ Modules - reusable parts of our design
 }
 
 #carbonads {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $sans;
   display: inline-block;
   overflow: hidden;
   max-width: 270px;
