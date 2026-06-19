@@ -275,26 +275,6 @@ table tr td :last-child {
   color: var(--text);
 }
 
-span[data-pullquote] {
-  display: block;
-
-  @include mobile {
-    display: none;
-  }
-}
-
-span[data-pullquote]:before {
-  content: attr(data-pullquote);
-  float: right;
-  width: 200px;
-  margin: 0 0 0.5em 30px;
-  padding: 0 -5% 0 0;
-  font-size: 1.3em;
-  font-style: italic;
-  color: var(--link);
-  text-align: center;
-}
-
 a {
   color: var(--link);
   text-decoration: none;
@@ -1282,6 +1262,5 @@ Modules - reusable parts of our design
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-//@import "highlights";
 @import "darcula";
 @import "svg-icons";
