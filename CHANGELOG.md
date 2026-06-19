@@ -28,6 +28,7 @@ Decoupled from the upstream Reverie fork into a standalone, first-party theme.
 - EyeRest warm, zero-blue theme (light/dark) and self-hosted brand fonts (Inter + JetBrains Mono)
 - Per-post SEO/GEO front matter (description, keywords, OG images) and post-to-post cross-links
 - Agent-loop diagram (SVG hero + PNG OG card)
+- Posts: a $150 pipetting robot, a self-driving-lab agent loop, and an open agentic coding harness
 
 ### Changed
 
@@ -36,6 +37,48 @@ Decoupled from the upstream Reverie fork into a standalone, first-party theme.
 ### Removed
 
 - Unused Reverie/Jekyll-Now theme leftovers (default fonts, pullquote include, highlights partial, duplicate markdownlint config)
+
+## [0.11.0] - 2026-01-15
+
+### Added
+
+- AgentX / AgentBeats "GraphJudge" multi-agent evaluation write-up
+
+## [0.10.0] - 2025-08-09
+
+### Added
+
+- AI-agents evaluation trilogy: comprehensive analysis, enhancement recommendations, and papers meta-review
+
+## [0.9.0] - 2025-02-07
+
+### Added
+
+- AI agents tools list and AI coding tools list
+
+## [0.8.0] - 2024-06-08
+
+### Added
+
+- SegFormer fine-tuning baseline results
+
+## [0.7.0] - 2024-05-27
+
+### Added
+
+- ML tooling overview
+
+## [0.6.0] - 2024-05-05
+
+### Added
+
+- SegFormer series, parts 1–4 (description, PoC difficulties, quantization description, quantization difficulties)
+
+## [0.5.0] - 2023-08-06
+
+### Added
+
+- SegFormer part 0 — short intro and reasoning for quantization
 
 ## [0.4.0] - 2022-08-04
 
