@@ -19,7 +19,7 @@ categories: [agents, ai, eval, tooling]
 
 The spine is a Bash-driven autonomous loop. [`ralph-loop-cc-tdd-wt-vibe-kanban-template`][ralph] picks the next story from a `prd.json`, drives Claude Code through a **Red → Green → Refactor** cycle (it refuses to mark a story done without a failing-test `[RED]` commit before the `[GREEN]` implementation), runs `make validate`, retries up to three times, and loops until every story passes. With `N_WT > 1` it runs several agents **in parallel git worktrees**, scores each result (stories passed, test count, coverage, lint penalties), and squash-merges the best — optionally with a Claude-as-judge pass and human approval. A `LEARNINGS.md` is appended after every story and re-read before the next, so knowledge compounds across the run. An optional Vibe Kanban board shows story status live.
 
-It's Geoffrey Huntley's ["Ralph" technique][ralph-technique] wired to Claude Code, TDD discipline, and worktree isolation. **Created 2026-01-18** — the first piece, and the center of everything below.
+It's Geoffrey Huntley's ["Ralph" technique][ralph-technique] — HumanLayer wrote up [a brief history of Ralph][ralph-history] — wired to Claude Code, TDD discipline, and worktree isolation. **Created 2026-01-18** — the first piece, and the center of everything below.
 
 ## The plugins — `claude-code-plugins`
 
@@ -120,5 +120,6 @@ A clean read: build the **loop** (Jan), **arm** it (Feb), then in a single March
 [office-forge]: https://github.com/qte77/office-forge-orchestrator
 [job-kit]: https://github.com/qte77/agentic-job-offer-to-application-kit
 [ralph-technique]: https://ghuntley.com/ralph/
+[ralph-history]: https://www.hlyr.dev/blog/brief-history-of-ralph
 [eval-posts]: /ai-agents-eval-comprehensive-analysis/
 [agentbeats-post]: /agentx-agentbeats-writeup/
