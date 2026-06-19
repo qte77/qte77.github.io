@@ -83,6 +83,20 @@ The whole arc, by repository creation date (`git log --max-parents=0`):
 
 A clean read: build the **loop** (Jan), **arm** it (Feb), then in a single March burst add **research**, a **quality benchmark**, **recursion**, and an **evaluator**; give it **senses** and **self-evolving offspring** in April.
 
+## Built before it had a name
+
+The vocabulary for this kind of work mostly arrived *after* the work did. Lining up when each term was coined against when the matching repo shipped:
+
+![Built before it had a name — buzzword coinage vs. qte77 ship dates][buzz-timeline]
+
+| Buzzword | Coined / went viral | qte77 shipped | Gap |
+| -------- | ------------------- | ------------- | --- |
+| Context engineering | [coined Jun 2025][ce-source] (Lütke, then Karpathy) | [`context-engineering-template`][ctx-template] — Jul 2025 | ~3 weeks after |
+| Loop engineering | [named in 2026; viral Jun 2026][loop-source] | [`ralph-loop`][ralph] — Jan 2026 | **~5 months ahead** |
+| Harness engineering | [Anthropic's harness posts][harness-source], late 2025–2026 | the harness cluster — Jan–Apr 2026 | in lockstep (ralph-loop cites them) |
+
+Not a priority claim — the ideas were in the air and others coined the words. The point is cadence: *context engineering* adopted within weeks of its naming, a *loop-engineering* harness running months before that phrase went viral, and the *harness* cluster built in step with the literature it cites.
+
 ## Quick answers
 
 **What is the "Ralph loop"?** An autonomous agent loop — pick a story, write a failing test, make it pass, refactor, validate, repeat — popularized by Geoffrey Huntley. `ralph-loop` is a Claude Code + TDD + git-worktree implementation of it.
@@ -121,5 +135,9 @@ A clean read: build the **loop** (Jan), **arm** it (Feb), then in a single March
 [job-kit]: https://github.com/qte77/agentic-job-offer-to-application-kit
 [ralph-technique]: https://ghuntley.com/ralph/
 [ralph-history]: https://www.hlyr.dev/blog/brief-history-of-ralph
+[buzz-timeline]: /images/buzzwords-vs-builds.svg
+[ce-source]: https://addyo.substack.com/p/context-engineering-bringing-engineering
+[harness-source]: https://addyosmani.com/blog/agent-harness-engineering/
+[loop-source]: https://www.mindstudio.ai/blog/what-is-loop-engineering-ai-coding-agents
 [eval-posts]: /ai-agents-eval-comprehensive-analysis/
 [agentbeats-post]: /agentx-agentbeats-writeup/
