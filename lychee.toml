@@ -35,6 +35,7 @@ exclude = [
   "NVIDIA/apex",
   "pytorch\\.org/cppdocs",
   "aws\\.amazon\\.com/machine-learning/automl",
+  "transmogrif\\.ai",                          # TransmogrifAI docs: TLS handshake fails (host dead)
 
   # --- Assets added in the same PR that first references them ---
   # base_url resolves /images/* against the LIVE site, so a new image 404s until
