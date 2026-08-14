@@ -35,6 +35,12 @@ exclude = [
   "NVIDIA/apex",
   "pytorch\\.org/cppdocs",
   "aws\\.amazon\\.com/machine-learning/automl",
+  "transmogrif\\.ai",                          # TransmogrifAI docs: TLS handshake fails (host dead)
+
+  # --- Assets added in the same PR that first references them ---
+  # base_url resolves /images/* against the LIVE site, so a new image 404s until
+  # the PR merges and Pages redeploys. Drop this line once the post is live.
+  "ledgerline-audit-trail",
 
   # --- qte77 self-links / assets to repoint (renamed repos / moved files, #30) ---
   "Agents-eval/blob/main/docs/papers/further_reading",
