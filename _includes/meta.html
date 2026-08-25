@@ -20,3 +20,22 @@
 <meta property='og:image' content='{{ site.image }}'>
 <meta name='twitter:image' content='{{ site.image }}'>
 {% endif %}{% endunless %}
+
+{% comment %} Extended JSON-LD (schema breadth for AI search / GEO): agenthud as a SoftwareApplication.
+Homepage only — jekyll-seo-tag already emits Person + WebSite, so this adds a distinct type. {% endcomment %}
+{% if page.url == '/' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "agenthud",
+  "description": "Renders live A2UI interfaces from natural-language prompts and replays AG-UI event streams — a qte77 agent-native demo (MCP + A2A + browser).",
+  "url": "https://qte77.github.io/agenthud-agui-a2ui/",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": { "@type": "Person", "name": "qte77", "url": "https://github.com/qte77" },
+  "sameAs": ["https://github.com/qte77/agenthud-agui-a2ui"]
+}
+</script>
+{% endif %}
