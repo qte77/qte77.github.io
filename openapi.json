@@ -1,0 +1,141 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "agenthud agent-native API",
+    "version": "1.0.0",
+    "summary": "Generate and validate A2UI interfaces from natural language over A2A, MCP, and a keyless HTTP endpoint.",
+    "description": "Agent-facing API for **agenthud** (a qte77 agent-native demo). An agent describes a UI in natural language and receives an A2UI component batch, or validates an A2UI batch structurally. No API key required — free server-side models (Cloudflare Workers AI, then OpenRouter `:free`). Discover the A2A card at `/.well-known/agent-card.json`; call tools over MCP at `/mcp` or A2A at `/a2a`.",
+    "contact": { "name": "qte77", "url": "https://github.com/qte77/agenthud-agui-a2ui" },
+    "license": { "name": "Apache-2.0", "identifier": "Apache-2.0" }
+  },
+  "servers": [
+    { "url": "https://agenthud-proxy.cloudflare-driveway392.workers.dev", "description": "Production Worker" }
+  ],
+  "externalDocs": { "url": "https://qte77.github.io/agenthud-agui-a2ui/", "description": "Live demo + docs" },
+  "paths": {
+    "/.well-known/agent-card.json": {
+      "get": {
+        "operationId": "getAgentCard",
+        "summary": "A2A Agent Card",
+        "description": "The A2A discovery document: agent name, skills, capabilities, and the A2A JSON-RPC interface URL.",
+        "responses": {
+          "200": {
+            "description": "The agent card",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/AgentCard" } } }
+          }
+        }
+      }
+    },
+    "/a2a": {
+      "post": {
+        "operationId": "a2aMessageSend",
+        "summary": "A2A message/send (JSON-RPC 2.0)",
+        "description": "Send an A2A message; the agent renders an A2UI batch and returns a synchronously-completed Task carrying it as a `data` artifact. Unsupported methods return JSON-RPC -32601.",
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/A2ARequest" } } }
+        },
+        "responses": {
+          "200": {
+            "description": "JSON-RPC result (an A2A Task) or a JSON-RPC error object",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/A2AResponse" } } }
+          }
+        }
+      }
+    },
+    "/mcp": {
+      "post": {
+        "operationId": "mcpCall",
+        "summary": "MCP server (Streamable HTTP, JSON-RPC 2.0)",
+        "description": "Model Context Protocol endpoint. Tools: `render_ui` (prompt → A2UI batch) and `validate_a2ui_batch` (structural check → `{valid, issues}`). Use an MCP client; supports `initialize`, `tools/list`, `tools/call`. Responses are `application/json` or `text/event-stream`.",
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/JsonRpcRequest" } } }
+        },
+        "responses": { "200": { "description": "An MCP JSON-RPC response" } }
+      }
+    },
+    "/agent/render": {
+      "post": {
+        "operationId": "keylessRender",
+        "summary": "Keyless A2UI render (Turnstile-gated)",
+        "description": "Browser-facing keyless render: runs free server-side models and returns an A2UI batch. Requires a Cloudflare Turnstile token (proof-of-human).",
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/RenderRequest" } } }
+        },
+        "responses": {
+          "200": {
+            "description": "An A2UI batch",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/RenderResponse" } } }
+          },
+          "403": { "description": "Turnstile verification failed", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } },
+          "429": { "description": "Rate limit exceeded", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "properties": { "error": { "type": "string", "description": "Short error code." }, "message": { "type": "string", "description": "Human/agent-readable detail." } },
+        "required": ["error"]
+      },
+      "RenderRequest": {
+        "type": "object",
+        "properties": {
+          "messages": { "type": "array", "items": { "type": "object", "properties": { "role": { "type": "string", "enum": ["user", "assistant"] }, "content": { "type": "string" } }, "required": ["role", "content"] } },
+          "turnstileToken": { "type": "string", "description": "Cloudflare Turnstile proof-of-human token." }
+        },
+        "required": ["turnstileToken"]
+      },
+      "RenderResponse": {
+        "type": "object",
+        "properties": { "a2uiMessages": { "type": "array", "items": { "type": "object" }, "description": "An A2UI message batch (beginRendering + surfaceUpdate…)." } },
+        "required": ["a2uiMessages"]
+      },
+      "A2ARequest": {
+        "type": "object",
+        "properties": {
+          "jsonrpc": { "type": "string", "const": "2.0" },
+          "id": { "description": "JSON-RPC request id." },
+          "method": { "type": "string", "enum": ["message/send"] },
+          "params": {
+            "type": "object",
+            "properties": { "message": { "type": "object", "properties": { "parts": { "type": "array", "items": { "type": "object", "properties": { "kind": { "type": "string", "enum": ["text", "data"] }, "text": { "type": "string" } } } } }, "required": ["parts"] } },
+            "required": ["message"]
+          }
+        },
+        "required": ["jsonrpc", "method", "params"]
+      },
+      "A2AResponse": {
+        "type": "object",
+        "properties": {
+          "jsonrpc": { "type": "string" },
+          "id": { "description": "Echoed request id." },
+          "result": { "type": "object", "description": "An A2A Task: { kind:'task', id, contextId, status:{state}, artifacts:[{ parts:[{ kind:'data', data:{ a2uiMessages } }] }] }." },
+          "error": { "type": "object", "properties": { "code": { "type": "integer" }, "message": { "type": "string" } } }
+        }
+      },
+      "JsonRpcRequest": {
+        "type": "object",
+        "description": "A JSON-RPC 2.0 MCP request (initialize / tools/list / tools/call).",
+        "properties": { "jsonrpc": { "type": "string", "const": "2.0" }, "id": {}, "method": { "type": "string" }, "params": { "type": "object" } },
+        "required": ["jsonrpc", "method"]
+      },
+      "AgentCard": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "version": { "type": "string" },
+          "skills": { "type": "array", "items": { "type": "object" } },
+          "capabilities": { "type": "object" },
+          "supportedInterfaces": { "type": "array", "items": { "type": "object", "properties": { "transport": { "type": "string" }, "url": { "type": "string" } } } }
+        },
+        "required": ["name", "description", "skills"]
+      }
+    }
+  }
+}
