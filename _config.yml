@@ -109,7 +109,9 @@ plugins:
   - jekyll-seo-tag # JSON-LD + canonical + OG tags; layout already calls {% seo %}
   - jekyll-paginate
 
-include: ['_pages']
+# '.well-known' is dot-prefixed, so Jekyll ignores it unless explicitly included — needed to
+# serve /.well-known/agent-card.json (A2A discovery) at the origin root.
+include: ['_pages', '.well-known']
 
 paginate: 6
 paginate_path: /page:num/

@@ -1,4 +1,28 @@
+# Content Signals (contentsignals.org) — how AI systems may use this content.
+# Estate posture (matches sfclarity.com): let search engines and AI answer engines
+# index and *cite* this content, but do not train on it. Hand-maintained + code-reviewed
+# on purpose — a managed-robots dashboard toggle has silently dropped such a policy before.
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+# Answer-engine crawlers that feed *cited* AI answers are explicitly welcome.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://qte77.github.io/sitemap.xml
