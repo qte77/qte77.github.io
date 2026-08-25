@@ -16,8 +16,19 @@ Types of changes:
 
 ## [Unreleased]
 
-- Things to come
-- Move to new version section if completed
+### Added
+
+- **Agent-native discovery at the origin root** — makes the estate's live agent-native demo (agenthud)
+  discoverable and machine-readable to AI crawlers/scanners (e.g. ora.ai):
+  - `/.well-known/agent-card.json` — A2A Agent Card (skills + the live `/a2a` interface), served via a
+    Jekyll `include: ['.well-known']`.
+  - `/openapi.json` — OpenAPI 3.1 for agenthud's agent API (A2A `message/send`, MCP, keyless render,
+    agent-card) with typed schemas + `operationId`s.
+  - `robots.txt` — `Content-Signal: search=yes, ai-input=yes, ai-train=no` + explicit allows for
+    answer-engine crawlers (GPTBot / OAI-SearchBot / ClaudeBot / PerplexityBot).
+  - Homepage `SoftwareApplication` JSON-LD (schema breadth beyond jekyll-seo-tag's Person + WebSite).
+  - `llms.txt` (+ its generator template) — new "Agent-native" + "When to use" sections (previously
+    llms.txt never mentioned agenthud).
 
 ## [1.0.0] - 2026-06-19
 
