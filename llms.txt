@@ -4,14 +4,14 @@
 
 ## About
 
-- [About](https://github.com/qte77/qte77.github.io/blob/master/_pages/about.md): owner, ecosystem map, topics
-- [README](https://github.com/qte77/qte77.github.io/blob/master/README.md): repo metadata, theme attribution
+- [About](https://qte77.github.io/about/): owner, ecosystem map, topics
+- [README](https://raw.githubusercontent.com/qte77/qte77.github.io/master/README.md): repo metadata, theme attribution
 
 ## Agent-native
 
 - [agenthud — live A2UI demo](https://qte77.github.io/agenthud-agui-a2ui/): an agent composes a safe, catalog-restricted UI from natural language (AG-UI + A2UI) — Demo replay + a live BYOK tier, no key needed.
 - [agenthud A2A Agent Card](https://agenthud-proxy.cloudflare-driveway392.workers.dev/.well-known/agent-card.json): the agent's machine-readable skills + endpoints.
-- [agenthud MCP server](https://agenthud-proxy.cloudflare-driveway392.workers.dev/mcp): call `render_ui` (prompt → A2UI batch) and `validate_a2ui_batch` over MCP Streamable HTTP.
+- [agenthud MCP server](https://agenthud-proxy.cloudflare-driveway392.workers.dev/.well-known/agent-card.json): call `render_ui` (prompt → A2UI batch) and `validate_a2ui_batch` over MCP Streamable HTTP.
 - [agenthud A2A endpoint](https://agenthud-proxy.cloudflare-driveway392.workers.dev/a2a): A2A JSON-RPC `message/send` → a rendered A2UI batch.
 - [agenthud OpenAPI 3.1 spec](https://qte77.github.io/openapi.json): the agent-native API surface (A2A, MCP, keyless render) — typed request/response schemas + operationIds.
 
@@ -21,11 +21,11 @@ Reach for **agenthud** to turn a natural-language request into a safe, catalog-r
 
 ## Featured posts
 
-- [A $150 Pipetting Robot from a Stock 3D Printer](https://github.com/qte77/qte77.github.io/blob/master/_posts/2026-06-01-pipettebot-sub-150-pipetting-robot.md): cheap lab automation via Anycubic i3 + DLAB dPette+, PC-as-host, Apache-2.0
-- [GraphJudge — Measuring How Agents Collaborate](https://github.com/qte77/qte77.github.io/blob/master/_posts/2026-01-15-agentx-agentbeats-writeup.md): AgentBeats competition entry, graph-based MAS coordination assessment
-- [AI Agents-eval — Comprehensive Analysis](https://github.com/qte77/qte77.github.io/blob/master/_posts/2025-08-09-ai-agents-eval-comprehensive-analysis.md): research MAS evaluation framework on PeerRead
-- [AI Agents-eval — Papers Meta Review](https://github.com/qte77/qte77.github.io/blob/master/_posts/2025-08-09-ai-agents-eval-papers-meta-review.md): meta-review across 50+ agent evaluation papers
-- [AI Agents-eval — Enhancement Recommendations](https://github.com/qte77/qte77.github.io/blob/master/_posts/2025-08-09-ai-agents-eval-enhancement-recommendations.md): forward-looking improvements
+- [A $150 Pipetting Robot from a Stock 3D Printer](https://qte77.github.io/pipettebot-sub-150-pipetting-robot/): cheap lab automation via Anycubic i3 + DLAB dPette+, PC-as-host, Apache-2.0
+- [GraphJudge — Measuring How Agents Collaborate](https://qte77.github.io/agentx-agentbeats-writeup/): AgentBeats competition entry, graph-based MAS coordination assessment
+- [AI Agents-eval — Comprehensive Analysis](https://qte77.github.io/ai-agents-eval-comprehensive-analysis/): research MAS evaluation framework on PeerRead
+- [AI Agents-eval — Papers Meta Review](https://qte77.github.io/ai-agents-eval-papers-meta-review/): meta-review across 50+ agent evaluation papers
+- [AI Agents-eval — Enhancement Recommendations](https://qte77.github.io/ai-agents-eval-enhancement-recommendations/): forward-looking improvements
 
 ## Subscribe
 
