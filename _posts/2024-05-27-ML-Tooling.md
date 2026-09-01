@@ -26,7 +26,7 @@ categories: [ml, tools]
   - [Azure AutoML](https://azure.microsoft.com/products/machine-learning/automatedml)
 - Also
   - [rminer](https://rdrr.io/cran/rminer)
-  - [TransmogrifAI](https://docs.transmogrif.ai/en/stable/developer-guide)
+  - [TransmogrifAI](https://github.com/salesforce/TransmogrifAI)
 
 # EDA
 
@@ -69,7 +69,7 @@ categories: [ml, tools]
 # Logging/Tracking
 
 - [Weights&Biases](https://wandb.ai/site)
-- [neptune.ai](https://neptune.ai/)
+- [neptune.ai](https://docs.neptune.ai/)
 - [TensorBoard - TensorFlow](https://www.tensorflow.org/tensorboard)
 
 #  GUI
