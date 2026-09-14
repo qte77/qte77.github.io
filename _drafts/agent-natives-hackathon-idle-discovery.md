@@ -68,6 +68,26 @@ ACL permission wall one step before actually sending a message. Better to say th
 overstate what shipped: four of five rubric lines are solid and verified live; this one is real
 progress, not yet a finished integration.
 
+## The result
+
+Internal track Runner-up. Mean score 66.63/100 across 8 judges, ranking 12th of 22 teams overall
+(the Internal track winner, Climatico, scored 73.25; the overall event leader, Showtonic, scored
+81). Two of the harder judge critiques are worth answering directly rather than leaving the prose
+above to speak past them.
+
+"Real metered AIsa call" means exactly this and no more: a real, live `chat/completions` call with
+a real request/response and a genuine usage receipt captured in each checkpoint — not a paid
+settlement. The tested account ran on a free-tier model, so no money changed hands; AIsa's x402
+pay-per-call surface was confirmed live and well-formed in earlier research for this build, but
+completing a real on-chain settlement was deliberately never attempted, and nothing here should be
+read as implying it was.
+
+And `org2` is not organizationally independent — same owner, same person, created after this repo.
+The claim worth standing behind is narrower and still real: org2's agent runs on its own ephemeral,
+repo-scoped `GITHUB_TOKEN` that cannot read this repo's AIsa key, cannot write to this repo, and
+cannot read its checkpoints — a platform-enforced credential boundary between the two agents, not
+an organizational one.
+
 ## Try it
 
 - Landing page: <https://qte77.github.io/2026-08-26-AgentNativeHack-FT-CF-SF/>
