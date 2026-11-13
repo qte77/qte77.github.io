@@ -3,10 +3,10 @@
   "name": "agenthud",
   "description": "Renders live A2UI interfaces from natural-language prompts and replays AG-UI event streams. A qte77 agent-native demo — ask it to draw a UI and it returns an A2UI component batch.",
   "version": "1.0.0",
-  "url": "https://agenthud-proxy.cloudflare-driveway392.workers.dev/a2a",
+  "url": "https://agenthud-api.abizz.dev/a2a",
   "preferredTransport": "JSONRPC",
   "supportedInterfaces": [
-    { "transport": "JSONRPC", "url": "https://agenthud-proxy.cloudflare-driveway392.workers.dev/a2a" }
+    { "transport": "JSONRPC", "url": "https://agenthud-api.abizz.dev/a2a" }
   ],
   "documentationUrl": "https://qte77.github.io/agenthud-agui-a2ui/",
   "provider": {

@@ -32,6 +32,8 @@ Types of changes:
 
 ### Changed
 
+- agenthud endpoints in `/.well-known/agent-card.json`, `/openapi.json`, `llms.txt` and its
+  template now use the Worker's custom domain `agenthud-api.abizz.dev`; its `workers.dev` URL is off.
 - `_drafts/agent-natives-hackathon-idle-discovery.md`: drop the Worker's full `workers.dev` URL, which
   exposed the Cloudflare account's subdomain; the draft now points to the source repo's README.
 
