@@ -30,6 +30,11 @@ Types of changes:
   - `llms.txt` (+ its generator template) — new "Agent-native" + "When to use" sections (previously
     llms.txt never mentioned agenthud).
 
+### Changed
+
+- `_drafts/agent-natives-hackathon-idle-discovery.md`: drop the Worker's full `workers.dev` URL, which
+  exposed the Cloudflare account's subdomain; the draft now points to the source repo's README.
+
 ## [1.0.0] - 2026-06-19
 
 Decoupled from the upstream Reverie fork into a standalone, first-party theme.
