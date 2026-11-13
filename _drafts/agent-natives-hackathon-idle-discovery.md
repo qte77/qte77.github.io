@@ -91,5 +91,5 @@ an organizational one.
 ## Try it
 
 - Landing page: <https://qte77.github.io/2026-08-26-AgentNativeHack-FT-CF-SF/>
-- MCP server: `POST https://agent-native-hack.cloudflare-driveway392.workers.dev/mcp`
+- MCP server: `POST /mcp` on the project's Worker (see the source repo's README)
 - Source: <https://github.com/qte77/2026-08-26-AgentNativeHack-FT-CF-SF>
