@@ -10,9 +10,9 @@
 ## Agent-native
 
 - [agenthud — live A2UI demo](https://qte77.github.io/agenthud-agui-a2ui/): an agent composes a safe, catalog-restricted UI from natural language (AG-UI + A2UI) — Demo replay + a live BYOK tier, no key needed.
-- [agenthud A2A Agent Card](https://agenthud-proxy.cloudflare-driveway392.workers.dev/.well-known/agent-card.json): the agent's machine-readable skills + endpoints.
-- [agenthud MCP server](https://agenthud-proxy.cloudflare-driveway392.workers.dev/.well-known/agent-card.json): call `render_ui` (prompt → A2UI batch) and `validate_a2ui_batch` over MCP Streamable HTTP.
-- [agenthud A2A endpoint](https://agenthud-proxy.cloudflare-driveway392.workers.dev/a2a): A2A JSON-RPC `message/send` → a rendered A2UI batch.
+- [agenthud A2A Agent Card](https://agenthud-api.abizz.dev/.well-known/agent-card.json): the agent's machine-readable skills + endpoints.
+- [agenthud MCP server](https://agenthud-api.abizz.dev/.well-known/agent-card.json): call `render_ui` (prompt → A2UI batch) and `validate_a2ui_batch` over MCP Streamable HTTP.
+- [agenthud A2A endpoint](https://agenthud-api.abizz.dev/a2a): A2A JSON-RPC `message/send` → a rendered A2UI batch.
 - [agenthud OpenAPI 3.1 spec](https://qte77.github.io/openapi.json): the agent-native API surface (A2A, MCP, keyless render) — typed request/response schemas + operationIds.
 
 ## When to use

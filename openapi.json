@@ -9,7 +9,7 @@
     "license": { "name": "Apache-2.0", "identifier": "Apache-2.0" }
   },
   "servers": [
-    { "url": "https://agenthud-proxy.cloudflare-driveway392.workers.dev", "description": "Production Worker" }
+    { "url": "https://agenthud-api.abizz.dev", "description": "Production Worker (custom domain)" }
   ],
   "externalDocs": { "url": "https://qte77.github.io/agenthud-agui-a2ui/", "description": "Live demo + docs" },
   "paths": {
